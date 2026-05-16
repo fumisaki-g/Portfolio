@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.header-contrainer {
+    border: 2px solid red;
+    box-shadow: 0 5px 10px black;
+}
+
+.header-nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2.5px 5px black;
+}
+
+.header-btn-con {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.header-btn-con :hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px black;
+}
+
+.header-btn {
+    margin: 1rem;
+    list-style: none;
+    background-color: red;
+    padding: 15px 10px;
+    justify-items: center;
+    border-radius: 30px;
+}
+
+
+.header-btn a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+.header-logo h2 {
+    font-weight: 600;
+}
+
+.header-logo {
+    justify-content: center;
+    margin: 2.5rem;
+}
+
+/* แถบ2 */
+
+.header-nav2-con {
+    justify-items: center;
+}
+
+.header-btn2-con {
+    display: flex;
+}
+
+.header-btn2 {
+    /* display: flex; */
+    margin: 1rem;
+    list-style: none;
+}
+
+.header-btn2 a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+}
+
+/* เข้าเนื้อ main  */
+
+/* ทำการ์ด */
+.card-con {
+    width: 700;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(107, 107, 107);
+}
+
+.
