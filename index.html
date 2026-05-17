@@ -9,9 +9,8 @@
 </head>
 
 <body>
-
-    <header class="header-contrainer">
-        <nav class="header-nav-con">
+    <header class="header-container">
+        <nav class="header-nav-con" id="nav-tab1">
             <div class="header-logo">
                 <h1>Vuthikorn Website</h1>
             </div>
@@ -22,50 +21,126 @@
                 <li class="header-btn"><a href="">Github</a></li>
             </ul>
         </nav>
-        <nav class="header-nav2-con">
+        <nav class="header-nav2-con nav-2-hidden" id="nav-tab2">
             <ul class="header-btn2-con">
-                <li class="header-btn2"><a href="">กิจกรรล่าสุด</a></li>
+                <li class="header-btn2"><a href="">กิจกรรมล่าสุด</a></li>
                 <li class="header-btn2"><a href="">เป้าหมาย</a></li>
                 <li class="header-btn2"><a href="">TGAT</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
 
-        <section class="card-con">
-            <img src="data:image/jpeg;base64,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"
-                alt="">
+    <main>
+        <section class="card-con" id="Home-web">
+            <img src="" alt="">
             <div class="card-content">
                 <h2>Lorem, ipsum.</h2>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, possimus. Ducimus eveniet labore
-                    corrupti doloremque repudiandae porro molestias similique debitis!</p>
-
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                </p>
             </div>
         </section>
 
-        <!-- <footer>
-            <section class="foot-link-socia">
-                <p><a href="#">FACEBOOK</a></p>
-                <p><a href="#">TIKTOK</a></p>
-                <p><a href="#">YOUTUBE</a></p>
-            </section>
-            <section class="foot-link-help">
-                <p><a href="#">หน้าแรก</a></p>
-                <p><a href="#">ช่องทางติดต่อ</a></p>
-                <p><a href="#">อคติ</a></p>
-                <p><a href="#">โปรไฟล์</a></p>
-            </section>
-            <section class="foot-link-website">
-                <p><a href="#">คลังผลงาน</a></p>
-            </section>
-        </footer> -->
+        <!-- card mini -->
 
+        <div class="slider-card">
 
+            <div class="project-card">
 
+                <section class="card-mini">
+                    <img src="" alt="">
+                    <div class="card-content">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                        </p>
+                    </div>
+                </section>
+                <section class="card-mini">
+                    <img src="" alt="">
+                    <div class="card-content">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                        </p>
+                    </div>
+                </section>
+                <section class="card-mini">
+                    <a href="#"><img src="" alt=""></a>
+                    <div class="card-content">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
 
     </main>
+
+    <footer class="footer-con">
+        <section class="footer-about">
+            <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
+            <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#"
+                    style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a href="#"
+                    style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
+                ระดับม.6โดยเฉพาะ
+                <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>ไม่มีปัญญาประดิษฐ์มาคอยช่วยเหลือ
+                <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
+                <a href="#" style="text-decoration: none; color: #4b5563;">นายวุฒิกร ปั้นนาค
+                    ม.6/1โรงเรียนพระบางวิทยา</a>
+            </p>
+
+        </section>
+        <section class="footer-website">
+            <h3>ปุ่มช่วยเหลือพิเศษ</h3>
+
+            <a href="#Home-web">หน้าแรก</a><br>
+            <a href="#">คลังผลงาน</a><br>
+            <a href="#" style="color: red;">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
+
+        </section>
+        <section class="footer-contact">
+            <h3>ช่องทางติดต่อ</h3>
+
+            <a href="https://www.facebook.com/share/1LPAihrgDJ/">Facebook</a><br>
+            <a href="https://www.youtube.com/@fumisaki_ginity">Youtube</a><br>
+            <a
+                href="https://www.tiktok.com/@fumisaki537?_r=1&_d=f07m6hb3b6blgl&sec_uid=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&share_author_id=6775693228253578242&sharer_language=th&source=h5_t&u_code=da4680kmd7bbah&timestamp=1779000264&user_id=6775693228253578242&sec_user_id=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7637536540575500052&share_link_id=1eb2fc98-fe27-4473-8363-42c8184c9fb7&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1">tiktok</a><br>
+            <a href="https://github.com/fumisaki-g">Github</a>
+
+
+        </section>
+
+
+    </footer>
+
+
+
+    <!-- popup ค่อยทำคิด ไม่ออก
+    <div class="overlay-popup">
+        <div class="popup-box">
+            <div class="popup-head">
+                <h1>การทำงานสภานักเรียน</h1>
+            </div>
+            <div class="popup-main">
+                <h2> welcome</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ipsa?</p>
+
+            </div>
+
+
+             <button class="close-popup">close</button>
+         </div>
+    </div> -->
+
+    <script src="script.js"></script>
 
 </body>
 
