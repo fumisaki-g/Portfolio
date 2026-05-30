@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Stylesheet moved from root style.css to assets/css/style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                 <h1>Vuthikorn Website</h1>
             </div>
             <ul class="header-btn-con">
-                <li class="header-btn"><a href="">หน้าหลัก</a></li>
+                <li class="header-btn"><a href="#Home-web">หน้าหลัก</a></li>
                 <li class="header-btn"><a href="">หน้าผลงาน</a></li>
                 <li class="header-btn"><a href="">ช่องทางติดต่อ</a></li>
                 <li class="header-btn"><a href="">Github</a></li>
@@ -32,16 +33,27 @@
 
 
     <main>
+
+        <div style="display: flex; justify-content: center; margin-top: 4rem;">
+            <h1 style="font-size: 45px; font-weight: 800;"> ยินดีต้อนรับ </h1>
+        </div>
+
         <section class="card-con" id="Home-web">
-            <img src="" alt="">
+            <img src="assets/images/m5.jpg" alt="">
             <div class="card-content">
-                <h2>Lorem, ipsum.</h2>
+                <h2>นายวุฒิกร ปั้นนาค</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 โรงเรียนพระบางวิทยา จังหวัดนครสวรรค์
                 </p>
+                <div style="display: flex; justify-content: right; margin-top: 1rem;"> 
+                    <a href="#" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;">ประวัติส่วนตัว</a>
+                </div>
             </div>
         </section>
+
+        <div style="display: flex; justify-content: center;">
+            <h1 style="font-size: 45px; font-weight: 800;"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
+        </div>
 
         <!-- card mini -->
 
@@ -50,32 +62,36 @@
             <div class="project-card">
 
                 <section class="card-mini">
-                    <img src="" alt="">
+                    <img src="assets/images/m2.jpg" alt="">
                     <div class="card-content">
-                        <h2>Lorem, ipsum.</h2>
+                        <h2>บรรเลงดนตรีไทย</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                            ในฐานะสภานักเรียนและหัวหน้าชมรมดนตรีไทย ได้นำนักเรียนดนตรีไทยจำนวนหนึ่ง
+                            ไปออกงานบรรเลงนอกสถานศึกษาเนื่องในงานไหว้ครู ณ บ้านครูจรูญ
+                            เพื่อให้น้องๆนักเรียนในชมรมเดียวกันได้มีประสบการณ์ในการออกงานแสดงจริง
                         </p>
                     </div>
                 </section>
                 <section class="card-mini">
-                    <img src="" alt="">
+                    <img src="assets/images/a1-2.jpg" alt="">
                     <div class="card-content">
-                        <h2>Lorem, ipsum.</h2>
+                        <h2>แข่งขันสร้างเกมจากโปรแกรมคอมพิวเตอร์</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                            แข่งขันศิลปหัตกรรม สร้างสรรค์เกมจากคอมพิวเตอร์ ครั้งที่ 73 ณ โรงเรียนนครสวรรค์
+                            ได้รับรางวัลเหรียญทอง
+                            คะแนน 89 คะแนน เป็นเกมแนว 2D เน้นการพัฒนาความคิดแบบ Logic โดยใช้เวลาฝึกซ้อมเพียงแค่ 1
+                            สัปดาห์
                         </p>
                     </div>
                 </section>
                 <section class="card-mini">
-                    <a href="#"><img src="" alt=""></a>
+                    <img src="assets/images/a3.png" alt="">
                     <div class="card-content">
-                        <h2>Lorem, ipsum.</h2>
+                        <h2>การเป็นโค้ชที่ดี</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Soluta, possimus. Ducimus eveniet labore corrupti doloremque.
+                            ได้รับการอบรมการเป็นโค้ชที่ดีแก่นักกีฬา ที่จัดขึ้นโดยมหาวิทยาลัยสวนสุนันทา
+                            ได้รับความสามารถในการสื่อสารที่ดีต่อลูกทีมและได้วิทยาการที่เป็นเทคนิคส่วนตัวจากวิทยากรแต่ละท่านเพิ่มเติม
+                            เช่น เทคนิคการใช้จิตวิทยา และ การคำนวนรูปแบบของทีม
                         </p>
                     </div>
                 </section>
@@ -85,46 +101,50 @@
     </main>
 
     <footer class="footer-con">
-        <section class="footer-about">
-            <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
-            <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#"
-                    style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a href="#"
-                    style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
-                ระดับม.6โดยเฉพาะ
-                <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>ไม่มีปัญญาประดิษฐ์มาคอยช่วยเหลือ
-                <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
-                <a href="#" style="text-decoration: none; color: #4b5563;">นายวุฒิกร ปั้นนาค
-                    ม.6/1โรงเรียนพระบางวิทยา</a>
-            </p>
+        <div class="footer-maxsection">
 
-        </section>
-        <section class="footer-website">
-            <h3>ปุ่มช่วยเหลือพิเศษ</h3>
+            <section class="footer-about">
 
-            <a href="#Home-web">หน้าแรก</a><br>
-            <a href="#">คลังผลงาน</a><br>
-            <a href="#" style="color: red;">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
+                <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
+                <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#"
+                        style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a
+                        href="#" style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
+                    ระดับม.6โดยเฉพาะ
+                    <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>ไม่มีปัญญาประดิษฐ์ช่วยเหลือ
+                    <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
+                    <a href="#" style="text-decoration: none; color: #4b5563;">นายวุฒิกร ปั้นนาค
+                        ม.6/1โรงเรียนพระบางวิทยา</a>
+                </p>
 
-        </section>
-        <section class="footer-contact">
-            <h3>ช่องทางติดต่อ</h3>
+            </section>
+            <section class="footer-website">
 
-            <a href="https://www.facebook.com/share/1LPAihrgDJ/">Facebook</a><br>
-            <a href="https://www.youtube.com/@fumisaki_ginity">Youtube</a><br>
-            <a
-                href="https://www.tiktok.com/@fumisaki537?_r=1&_d=f07m6hb3b6blgl&sec_uid=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&share_author_id=6775693228253578242&sharer_language=th&source=h5_t&u_code=da4680kmd7bbah&timestamp=1779000264&user_id=6775693228253578242&sec_user_id=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7637536540575500052&share_link_id=1eb2fc98-fe27-4473-8363-42c8184c9fb7&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1">tiktok</a><br>
-            <a href="https://github.com/fumisaki-g">Github</a>
+                <h3>ปุ่มช่วยเหลือพิเศษ</h3>
+
+                <a href="#Home-web">หน้าแรก</a><br>
+                <a href="#" style="text-decoration: none;">คลังผลงาน</a><br>
+                <a href="#" style="color: red;">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
+
+            </section>
+            <section class="footer-contact">
+
+                <h3>ช่องทางติดต่อ</h3>
+
+                <a href="https://www.facebook.com/share/1LPAihrgDJ/">Facebook</a><br>
+                <a href="https://www.youtube.com/@fumisaki_ginity">Youtube</a><br>
+                <a
+                    href="https://www.tiktok.com/@fumisaki537?_r=1&_d=f07m6hb3b6blgl&sec_uid=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&share_author_id=6775693228253578242&sharer_language=th&source=h5_t&u_code=da4680kmd7bbah&timestamp=1779000264&user_id=6775693228253578242&sec_user_id=MS4wLjABAAAASbbH_jg7AnXfeX4nHLKv6YKCgdJBQv48b3XR_v8NAXgRBb9Ue7FI2rVxTcdqfKrb&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7637536540575500052&share_link_id=1eb2fc98-fe27-4473-8363-42c8184c9fb7&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1">tiktok</a><br>
+                <a href="https://github.com/fumisaki-g">Github</a>
 
 
-        </section>
+            </section>
+        </div>
 
 
     </footer>
 
-
-
-    <!-- popup ค่อยทำคิด ไม่ออก
-    <div class="overlay-popup">
+    <!-- popup ค่อยทำคิด ไม่ออก -->
+    <div class="overlay-popup" ">
         <div class="popup-box">
             <div class="popup-head">
                 <h1>การทำงานสภานักเรียน</h1>
@@ -132,15 +152,21 @@
             <div class="popup-main">
                 <h2> welcome</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ipsa?</p>
+            </div>
 
+            <div class="popup-banner">
+                <img src="assets/images/Banner.jpg" alt="Popup Image" style="width: 100%; height: auto;">
+
+                <button class="popup-close-btn">Close</button>
             </div>
 
 
              <button class="close-popup">close</button>
          </div>
-    </div> -->
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Script moved from root script.js to assets/js/script.js -->
+    <script src="assets/js/script.js"></script>
 
 </body>
 
