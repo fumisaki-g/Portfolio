@@ -39,11 +39,3 @@ tab2.addEventListener('mouseleave', () => {
     isOverTab2 = false;
     checkandHide();
 });
-
-// POPUP
-const popup = document.querySelector('.popup-banner');
-const closeBtn = document.querySelector('.popup-close-btn');
-
-closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
-});

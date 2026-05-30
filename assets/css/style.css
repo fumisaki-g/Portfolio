@@ -244,33 +244,3 @@ body {
 
 /* POPUP */
 
-.popup-banner img {
-    width: 100%;
-    height: auto;
-}
-.popup-banner {
-    position: fixed;
-    top: 10%;
-    left: 12%;
-    width: 75%;
-    height: 75%;
-    background-color: black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-}
-.popup-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* BANNER */
-
