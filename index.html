@@ -18,7 +18,7 @@
             </div>
             <ul class="header-btn-con">
                 <li class="header-btn"><a href="#Home-web">หน้าหลัก</a></li>
-                <li class="header-btn"><a href="">หน้าผลงาน</a></li>
+                <li class="header-btn"><a href="#certificates">หน้าผลงาน</a></li>
                 <li class="header-btn"><a href="#contact-info">ช่องทางติดต่อ</a></li>
                 <li class="header-btn"><a href="https://github.com/fumisaki-g">Github</a></li>
             </ul>
@@ -105,24 +105,204 @@
         </div>
 
         <!-- หน้าผลงานรวม และ การทำหมวดหมู่ -->
+
+
+    
         <section class="Certificates-contrainer">
             <div style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;"> คลังเกียรติบัตร </h1>
+                <h1 style="font-size: 45px; font-weight: 800;" id="certificates"> คลังเกียรติบตร </h1>
                 <h2 style="font-size: 45px; font-weight: 800;"> Certificates </h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filtercards('all')" class="filter-btn">ทั้งหมด</button>
+                <button onclick="filtercards('training')" class="filter-btn">อบรม</button>
+                <button onclick="filtercards('competition')" class="filter-btn">แข่งขัน</button>
+                <button onclick="filtercards('other')" class="filter-btn">อื่นๆ</button>
+                <div class="filter-btn-year">
+                    <a href="#year-2569" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2569</a>
+                    <a href="#year-2568" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2568</a>
+                    <a href="#year-2567" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2567</a>
+                    <a href="#year-2566" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2566</a>
+                    <a href="#year-2565" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2565</a>
+                </div>
+            </div>
+
+            <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;" id="year-2569"> ปี 2569 </h1>
+            </div>
+            
+
+            <div class="card-certificates-container">
+                <div class="card-certificates" data-category="training">
+                        <img src="assets/images/c1-2569.png" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันสร้างสรรค์เกม</h2>
+    
+                        </div>
+                </div>
+            </div>
+            
+            <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;" id="year-2568"> ปี 2568 </h1>
             </div>
 
 
+            <div class="card-certificates-container">
+                <div class="card-certificates" data-category="competition">
+                        <img src="assets/images/c4-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                        </div>
+                </div>
+                <div class="card-certificates" data-category="competition">
+                        <img src="assets/images/c3-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>ชื่อเกียรติบตร</h2>
+                        </div>
+                </div>
+             </div>
+             <div class="card-certificates-container">
+                <div class="card-certificates" data-category="training">
+                        <img src="assets/images/c2-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันสร้างสรรค์เกม</h2>
+    
+                        </div>
+                </div>
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c5-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>ชื่อเกียรติบตร</h2>
+    
+                        </div>
+                </div>
+             </div>
+             <div class="card-certificates-container">
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c6-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>ชื่อเกียรติบตร</h2>
+                        </div>
+                </div>
+                <div class="card-certificates" data-category="training">
+                        <img src="assets/images/c7-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                                    <h2>ชื่อเกียรติบตร</h2>
+                        </div>
+                </div>
+             </div>
+             <div class="card-certificates-container">
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c10-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันสร้างสรรค์เกม</h2>
+    
+                        </div>
+                </div>
+                <div class="card-certificates" data-category="training">
+                    <img src="assets/images/c11-2568.jpg" alt="" class="card-image-certificates">
+                    <div class="card-content-certificates">
+                        <h2>ชื่อเกียรติบตร</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="other">
+                           <img src="assets/images/c12-2568.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                   <div class="card-certificates" data-category="training">
+                           <img src="assets/images/c13-2568.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+                <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="other">
+                           <img src="assets/images/c12-2568.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+                
+
+                <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;" id="year-2567"> ปี 2567 </h1>
+            </div>
+
+
+            <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c14-2567.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+
+
+                 <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;" id="year-2566"> ปี 2566 </h1>
+            </div>
+
+
+            <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c16-2566.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c19-2566.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+
+                 <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;" id="year-2565"> ปี 2565 </h1>
+            </div>
+
+
+            <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c15-2565.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c17-2565.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+                <div class="card-certificates-container">
+                   <div class="card-certificates" data-category="competition">
+                           <img src="assets/images/c18-2565.jpg" alt="" class="card-image-certificates">
+                           <div class="card-content-certificates">
+                               <h2>การแข่งขันสร้างสรรค์เกม</h2>
+                           </div>
+                   </div>
+                </div>
+
+
         </section>
-
-
-        
-
-        
-        
+                
     </main>
-    
-    
-    
+
+
+
+
+        <!-- footer and pupup-->
+
     <footer class="footer-con">
         <div class="footer-maxsection">
             
@@ -133,7 +313,7 @@
                     style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a
                     href="#" style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
                     ระดับม.6โดยเฉพาะ
-                    <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>ไม่มีปัญญาประดิษฐ์ช่วยเหลือ
+                    <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>มีปัญญาประดิษฐ์ช่วยเหลือในการจัดเรียงข้อมูลและออกแบบเล็กน้อยเท่านั้น
                     <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
                     <a href="#" style="text-decoration: none; color: #4b5563;">นายวุฒิกร ปั้นนาค
                         ม.6/1โรงเรียนพระบางวิทยา</a>
@@ -145,7 +325,7 @@
                 <h3>ปุ่มช่วยเหลือพิเศษ</h3>
 
                 <a href="#Home-web">หน้าแรก</a><br>
-                <a href="#" style="text-decoration: none;">คลังผลงาน</a><br>
+                <a href="#certificates" style="text-decoration: none;">คลังผลงาน</a><br>
                 <a href="#" style="color: red;">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
 
             </section>
@@ -165,6 +345,11 @@
 
 
     </footer>
+
+
+    <!-- popup  -->
+
+
     
     <!-- popup-C1 -->
     <div class="overlay-popup" id="background-popup-c1">
@@ -236,7 +421,6 @@
         <div class="popup-box">
             <div class="popup-head">
                 <h1>การทำงานสภานักเรียน</h1>
-                <button class="close-popup" id="close-popup-c3">close</button>
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>

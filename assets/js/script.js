@@ -2,6 +2,9 @@
 const tab1 = document.getElementById('nav-tab1')
 const tab2 = document.getElementById('nav-tab2')
 
+
+
+
 let isOverTab1 = false;
 let isOverTab2 = false;
 
@@ -39,3 +42,15 @@ tab2.addEventListener('mouseleave', () => {
     isOverTab2 = false;
     checkandHide();
 });
+
+
+function filtercards(category) {
+    const cards = document.querySelectorAll('.card-certificates');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });;
+}

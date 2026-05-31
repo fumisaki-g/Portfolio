@@ -212,7 +212,74 @@ body {
     text-decoration: none;
 }
 
+/* ปุ่มกรองผลงาน */
 
+.filter-btn {
+    background-color: #111827;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5rem;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* การ์ดคลังผลงาน */
+
+.card-certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.card-certificates {
+    width: 35%;
+    /* margin: 0 auto; */
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-certificates:hover {
+    transform: translateY(-5px);
+}
+
+.card-image-certificates {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content-certificates {
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+
+.filter-btn-year {
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+}
 
 
 /* RESPONSIVE */
