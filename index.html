@@ -7,6 +7,7 @@
     <title>Document</title>
     <!-- Stylesheet moved from root style.css to assets/css/style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
 </head>
 
 <body>
@@ -18,15 +19,15 @@
             <ul class="header-btn-con">
                 <li class="header-btn"><a href="#Home-web">หน้าหลัก</a></li>
                 <li class="header-btn"><a href="">หน้าผลงาน</a></li>
-                <li class="header-btn"><a href="">ช่องทางติดต่อ</a></li>
-                <li class="header-btn"><a href="">Github</a></li>
+                <li class="header-btn"><a href="#contact-info">ช่องทางติดต่อ</a></li>
+                <li class="header-btn"><a href="https://github.com/fumisaki-g">Github</a></li>
             </ul>
         </nav>
         <nav class="header-nav2-con nav-2-hidden" id="nav-tab2">
             <ul class="header-btn2-con">
-                <li class="header-btn2"><a href="">กิจกรรมล่าสุด</a></li>
+                <li class="header-btn2"><a href="#latest-activities">กิจกรรมล่าสุด</a></li>
                 <li class="header-btn2"><a href="">เป้าหมาย</a></li>
-                <li class="header-btn2"><a href="">TGAT</a></li>
+                <li class="header-btn2"><a href="">คะแนน TGAT</a></li>
             </ul>
         </nav>
     </header>
@@ -37,31 +38,36 @@
         <div style="display: flex; justify-content: center; margin-top: 4rem;">
             <h1 style="font-size: 45px; font-weight: 800;"> ยินดีต้อนรับ </h1>
         </div>
-
+        
         <section class="card-con" id="Home-web">
             <img src="assets/images/m5.jpg" alt="">
             <div class="card-content">
-                <h2>นายวุฒิกร ปั้นนาค</h2>
-                <p>
-                    นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 โรงเรียนพระบางวิทยา จังหวัดนครสวรรค์
-                </p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2>นายวุฒิกร ปั้นนาค</h2>
+                    <h2 style="color: rgb(255, 0, 0);">Vutthikorn Pannakh</h2>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 1rem;"> 
+                    <p">
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 แผนกวิชาวิทยาศาสตร์-คณิตศาสตร์ <br> ผู้นำด้านเทคโนโลยี โรงเรียนพระบางวิทยา จังหวัดนครสวรรค์
+                    </p>
+                </div>
                 <div style="display: flex; justify-content: right; margin-top: 1rem;"> 
                     <a href="#" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;">ประวัติส่วนตัว</a>
                 </div>
             </div>
         </section>
-
+        
         <div style="display: flex; justify-content: center;">
-            <h1 style="font-size: 45px; font-weight: 800;"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
+            <h1 style="font-size: 45px; font-weight: 800;" id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
         </div>
-
+        
         <!-- card mini -->
-
+        
         <div class="slider-card">
-
+            
             <div class="project-card">
-
-                <section class="card-mini">
+                
+                <section class="card-mini" id="open-popup-c1">
                     <img src="assets/images/m2.jpg" alt="">
                     <div class="card-content">
                         <h2>บรรเลงดนตรีไทย</h2>
@@ -72,7 +78,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="card-mini">
+                <section class="card-mini" id="open-popup-c2">
                     <img src="assets/images/a1-2.jpg" alt="">
                     <div class="card-content">
                         <h2>แข่งขันสร้างเกมจากโปรแกรมคอมพิวเตอร์</h2>
@@ -84,7 +90,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="card-mini">
+                <section class="card-mini" id="open-popup-c3">
                     <img src="assets/images/a3.png" alt="">
                     <div class="card-content">
                         <h2>การเป็นโค้ชที่ดี</h2>
@@ -98,17 +104,34 @@
             </div>
         </div>
 
-    </main>
+        <!-- หน้าผลงานรวม และ การทำหมวดหมู่ -->
+        <section class="Certificates-contrainer">
+            <div style="display: grid; justify-content: center; margin-top: 4rem;">
+                <h1 style="font-size: 45px; font-weight: 800;"> คลังเกียรติบัตร </h1>
+                <h2 style="font-size: 45px; font-weight: 800;"> Certificates </h2>
+            </div>
 
+
+        </section>
+
+
+        
+
+        
+        
+    </main>
+    
+    
+    
     <footer class="footer-con">
         <div class="footer-maxsection">
-
+            
             <section class="footer-about">
-
+                
                 <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
                 <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#"
-                        style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a
-                        href="#" style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
+                    style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a
+                    href="#" style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
                     ระดับม.6โดยเฉพาะ
                     <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>ไม่มีปัญญาประดิษฐ์ช่วยเหลือ
                     <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
@@ -128,7 +151,7 @@
             </section>
             <section class="footer-contact">
 
-                <h3>ช่องทางติดต่อ</h3>
+                <h3 id="contact-info">ช่องทางติดต่อ</h3>
 
                 <a href="https://www.facebook.com/share/1LPAihrgDJ/">Facebook</a><br>
                 <a href="https://www.youtube.com/@fumisaki_ginity">Youtube</a><br>
@@ -142,25 +165,108 @@
 
 
     </footer>
-
-    <!-- popup ค่อยทำคิด ไม่ออก -->
-    <div class="overlay-popup" ">
+    
+    <!-- popup-C1 -->
+    <div class="overlay-popup" id="background-popup-c1">
+        <div class="popup-box">
+            <div class="popup-head">
+                <h1>การบรรเลงดนตรีไทย</h1>
+            </div>
+            <div class="popup-main">
+                <h2>ทักษะที่ได้รับ</h2>
+                <p>
+                    <ul>
+                        <li>การฝึกทักษะดนตรี</li>
+                        <li>การจัดการความตื่นเต้น</li>
+                        <li>การทำงานเป็นทีม</li>
+                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                    </ul>
+                </p>
+                
+                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
+                <p>
+                    <li>
+                        <li>การบริหารพลังงานของน้องๆในวงดนตรี</li>
+                        <li>การเข้าใจน้องๆในวงได้ดีขีขึ้น</li>
+                        <li>ได้รับการยอมรับจากน้องๆในวงดนตรี</li>
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="popup-footer">
+                <button class="close-popup" id="close-popup-c1">close</button>
+            </div>                        
+        </div>
+    </div>
+    
+    <!-- popup-A1-2 -->
+    <div class="overlay-popup" id="background-popup-c2">
+        <div class="popup-box">
+            <div class="popup-head">
+                <h1>การแข่งขันศิลปะหัตกรรมนักเรียนปีที่ 73 การแข่งขันสร้างสรรค์เกมจากโปรแกรมคอมพิวเตอร์</h1>
+            </div>
+            <div class="popup-main">
+                <h2>ทักษะที่ได้รับ</h2>
+                <p>
+                    <ul>
+                        <li>การพัฒนาทักษะการสร้างสรรค์</li>
+                        <li>การใช้โปรแกรมคอมพิวเตอร์ขั้นสูง</li>
+                        <li>การทำงานเป็นทีม</li>
+                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                    </ul>
+                </p>
+                
+                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
+                <p>
+                    <ul>
+                        <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
+                        <li>การทำงานร่วมกับทีมอย่างมีประสิทธิภาพ</li>
+                        <li>ได้รับความตื่นเต้นในการทำงาน</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="popup-footer">
+                <button class="close-popup" id="close-popup-c2">close</button>
+            </div>            
+            
+        </div>
+    </div>
+    <!-- popup-C3 -->
+    <div class="overlay-popup" id="background-popup-c3">
         <div class="popup-box">
             <div class="popup-head">
                 <h1>การทำงานสภานักเรียน</h1>
+                <button class="close-popup" id="close-popup-c3">close</button>
             </div>
             <div class="popup-main">
-                <h2> welcome</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ipsa?</p>
+                <h2>ทักษะที่ได้รับ</h2>
+                <p>
+                    <ul>
+                        <li>การเป็นผู้นำที่ดี</li>
+                        <li>การสื่อสารที่ดี</li>
+                        <li>การทำงานเป็นทีม</li>
+                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                    </ul>
+                </p>
+                
+                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
+                <p>
+                    <ul>
+                        <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
+                        <li>การวางแผนและจัดทำโครงการ</li>
+                        <li>ได้จัดการปัญหาอย่างเป็นกลางและยุติธรรม</li>
+                    </ul>
+                </p>
             </div>
-
-            
-             <button class="close-popup">close</button>
+            <div class="popup-footer">
+                <button class="close-popup" id="close-popup-c3">close</button>
+            </div>
          </div>
     </div>
 
     <!-- Script moved from root script.js to assets/js/script.js -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/popup.js"></script>
 
 </body>
 
