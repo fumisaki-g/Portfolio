@@ -1,0 +1,10 @@
+/* Aggregates split CSS modules */
+@import url('./layout.css');
+@import url('./header.css');
+@import url('./cards.css');
+@import url('./projects.css');
+@import url('./certificates.css');
+@import url('./footer.css');
+@import url('./popup.css');
+@import url('./responsive.css');
+

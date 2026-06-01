@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Stylesheet moved from root style.css to assets/css/style.css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/popup.css">
+    <title>Vutthikorn Website</title>
+    <!-- Load main CSS entrypoint only -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
+    <!-- HEADER SECTION -->
     <header class="header-container">
         <nav class="header-nav-con" id="nav-tab1">
             <div class="header-logo">
-                <h1>Vuthikorn Website</h1>
+                <h1>Vutthikorn Website</h1>
             </div>
             <ul class="header-btn-con">
-                <li class="header-btn"><a href="#Home-web">หน้าหลัก</a></li>
+                <li class="header-btn"><a href="#open-popup-home">หน้าหลัก</a></li>
                 <li class="header-btn"><a href="#certificates">หน้าเกียรติบัตร</a></li>
                 <li class="header-btn"><a href="#contact-info">ช่องทางติดต่อ</a></li>
                 <li class="header-btn"><a href="https://github.com/fumisaki-g">Github</a></li>
@@ -32,36 +32,36 @@
         </nav>
     </header>
 
-
+    <!-- MAIN CONTENT -->
     <main>
 
-        <div style="display: flex; justify-content: center; margin-top: 4rem;">
-            <h1 style="font-size: 45px; font-weight: 800;"> ยินดีต้อนรับ </h1>
+        <!-- HERO SECTION -->
+        <div class="section-title-row">
+            <h1 class="large-heading"> ยินดีต้อนรับ </h1>
         </div>
         
-        <section class="card-con" id="Home-web">
+        <section class="card-con" id="open-popup-home">
             <img src="assets/images/m5.jpg" alt="">
             <div class="card-content">
-                <div style="display: flex; flex-direction: column; align-items: center;">
+                <div class="center-column">
                     <h2>นายวุฒิกร ปั้นนาค</h2>
-                    <h2 style="color: rgb(255, 0, 0);">Vutthikorn Pannakh</h2>
+                    <h2 class="text-highlight-red">Vutthikorn Pannakh</h2>
                 </div>
-                <div style="display: flex; justify-content: center; margin-top: 1rem;"> 
-                    <p">
-                    นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 แผนกวิชาวิทยาศาสตร์-คณิตศาสตร์ <br> ผู้นำด้านเทคโนโลยี โรงเรียนพระบางวิทยา จังหวัดนครสวรรค์
+                <div class="row-center"> 
+                    <p>
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 <br> แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์<br> ผู้สนใจด้านเทคโนโลยีและวิทยาการคอมพิวเตอร์
                     </p>
                 </div>
-                <div style="display: flex; justify-content: right; margin-top: 1rem;"> 
-                    <a href="#" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;">ประวัติส่วนตัว</a>
+                <div class="row-right"> 
+                    <a href="#" class="text-action-link">ประวัติส่วนตัว</a>
                 </div>
             </div>
         </section>
         
-        <div style="display: flex; justify-content: center;">
-            <h1 style="font-size: 45px; font-weight: 800;" id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
+        <!-- ACTIVITIES SECTION -->
+        <div class="section-row">
+            <h1 class="large-heading" id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
         </div>
-        
-        <!-- card mini -->
         
         <div class="slider-card">
             
@@ -107,8 +107,9 @@
 
 
 
-         <div style="display: flex; justify-content: center;">
-            <h1 style="font-size: 45px; font-weight: 800;" id="projects-goals"> ผลงาน - เป้าหมาย </h1>
+        <!-- PROJECTS SECTION -->
+        <div class="section-row">
+            <h1 class="large-heading" id="projects-goals"> ผลงาน - เป้าหมาย </h1>
         </div>
 
         <section>
@@ -116,73 +117,69 @@
             <div class="card-certificates-container">
                 <div class="card-project">
                     <button class="btn-img-project">อยู่ระหว่างการจัดทำ</button>
-                        <img src="assets/images/p-1.png" alt="" class="card-image-certificates">
-                        <div class="card-content-certificates">
-                            <h2>สร้างเว็ปของตัวเอง</h2>
-                            <p>เป็นเว็ปส่วนตัวที่สร้างขึ้นเองเพื่อแสดงผลงานและประสบการณ์ ที่มี AI คอยช่วยเหลือด้านไอเดียการออกแบบ</p>
-                        </div>
-                        <div class="tag-project">
-                            <p class="tag" style="color: #b50000;">[HTML]</p>
-                            <p class="tag" style="color: #65b3d2;">[CSS]</p>
-                            <p class="tag" style="color: #6e8701;">[JavaScript]</p>
-                        </div>
+                    <img src="assets/images/p-1.png" alt="" class="card-image-certificates">
+                    <div class="card-content-certificates">
+                        <h2>สร้างเว็ปของตัวเอง</h2>
+                        <p>เป็นเว็ปส่วนตัวที่สร้างขึ้นเองเพื่อแสดงผลงานและประสบการณ์ ที่มี AI คอยช่วยเหลือด้านไอเดียการออกแบบ</p>
                     </div>
-                    <div class="card-project"> 
-                        <button class="btn-img-project" style="background-color: #005bca;">กำลังจัดทำ</button>
-                        <img src="assets/images/p-2.png" alt="" class="card-image-certificates">
-                        <div class="card-content-certificates">
-                            <h2>โครงงาน IS</h2>
-                            <p>เปรียบเทียบประสิทธิภาพของระบบปฏิบัติการระหว่าง Linux และ Windows</p>
-                        </div>
-                        <div class="tag-project">
-                            <p class="tag">[OS]</p>
-                            <p class="tag" style="color: #29c2ff;">[WINDOW 11 PRO]</p>
-                            <p class="tag">[LINUX MINT]</p>
-                        </div>
+                    <div class="tag-project">
+                        <p class="tag tag-html">[HTML]</p>
+                        <p class="tag tag-css">[CSS]</p>
+                        <p class="tag tag-js">[JavaScript]</p>
                     </div>
                 </div>
-                <div class="card-certificates-container">
-                    <div class="card-project">
-                        <button class="btn-img-project" style="background-color: #fa6c00;">อยู่ระหว่างการจัดหาอุปกรณ์</button>
-                        <img src="assets/images/p-3.jpg" alt="" class="card-image-certificates">
-                        <div class="card-content-certificates">
-                            <h2>ทำที่รูดม่านผ่านมือถือ IoT</h2>
-                            <p>ทำที่รูดม่านผ่านมือถือด้วยระบบควบคุมอัจฉริยะ นำสิ่งที่อบรมมาประยุกต์ใช้จริง</p>
-                        </div>
-                        <div class="tag-project">
-                            <p class="tag">[ESP32]</p>
-                            <p class="tag">[ARDUINO IDE]</p>
-                            <p class="tag">[C++]</p>
-                        </div>
+                <div class="card-project">
+                    <button class="btn-img-project btn-status-blue">กำลังจัดทำ</button>
+                    <img src="assets/images/p-2.png" alt="" class="card-image-certificates">
+                    <div class="card-content-certificates">
+                        <h2>โครงงาน IS</h2>
+                        <p>เปรียบเทียบประสิทธิภาพของระบบปฏิบัติการระหว่าง Linux และ Windows</p>
                     </div>
-                    <div class="card-project" >
-                        <button class="btn-img-project" style="background-color: #48ff00;">รอการเปิดรับสมัคร</button>
-                        <img src="assets/images/p-4.png" alt="" class="card-image-certificates">
-                        <div class="card-content-certificates" style="margin-top: 2rem;">
-                            <h2>TCAS 70</h2>
-                            <p>สมัครระบบ TCAS 70 เพื่อเข้าศึกษาต่อในระดับมหาวิทยาลัย โดยมีเป้าหมายในการเข้าศึกษาต่อในสาขาวิทยาการคอมพิวเตอร์</p>
-                        </div>
-                        <div class="tag-project">
-                            <p class="tag">[TCAS70</p>
-                            <p class="tag">[UNIVERSITY]</p>
-                            <p class="tag">[DEK70]</p>
-                        </div>
+                    <div class="tag-project">
+                        <p class="tag">[OS]</p>
+                        <p class="tag tag-win">[WINDOW 11 PRO]</p>
+                        <p class="tag">[LINUX MINT]</p>
+                    </div>
                 </div>
+            </div>
+            <div class="card-certificates-container">
+                <div class="card-project">
+                    <button class="btn-img-project btn-status-orange">อยู่ระหว่างการจัดหาอุปกรณ์</button>
+                    <img src="assets/images/p-3.jpg" alt="" class="card-image-certificates">
+                    <div class="card-content-certificates">
+                        <h2>ทำที่รูดม่านผ่านมือถือ IoT</h2>
+                        <p>ทำที่รูดม่านผ่านมือถือด้วยระบบควบคุมอัจฉริยะ นำสิ่งที่อบรมมาประยุกต์ใช้จริง</p>
+                    </div>
+                    <div class="tag-project">
+                        <p class="tag">[ESP32]</p>
+                        <p class="tag">[ARDUINO IDE]</p>
+                        <p class="tag">[C++]</p>
+                    </div>
                 </div>
-             </div>
-             
+                <div class="card-project">
+                    <button class="btn-img-project btn-status-green">รอการเปิดรับสมัคร</button>
+                    <img src="assets/images/p-4.png" alt="" class="card-image-certificates">
+                    <div class="card-content-certificates mt-2rem">
+                        <h2>TCAS 70</h2>
+                        <p>สมัครระบบ TCAS 70 เพื่อเข้าศึกษาต่อในระดับมหาวิทยาลัย โดยมีเป้าหมายในการเข้าศึกษาต่อในสาขาวิทยาการคอมพิวเตอร์</p>
+                    </div>
+                    <div class="tag-project">
+                        <p class="tag">[TCAS70]</p>
+                        <p class="tag">[UNIVERSITY]</p>
+                        <p class="tag">[DEK70]</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-
-        <!-- หน้าผลงานรวม และ การทำหมวดหมู่ -->
+        <!-- CERTIFICATES SECTION -->
 
 
     
         <section class="Certificates-contrainer">
-            <div style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="certificates"> คลังเกียรติบตร </h1>
-                <h2 style="font-size: 45px; font-weight: 800;"> Certificates </h2>
+            <div class="Certificates-year">
+                <h1 class="large-heading" id="certificates"> คลังเกียรติบัตร </h1>
+                <h2 class="large-heading"> Certificates </h2>
             </div>
             <div class="filter-buttons">
                 <button onclick="filtercards('all')" class="filter-btn">ทั้งหมด</button>
@@ -190,16 +187,68 @@
                 <button onclick="filtercards('competition')" class="filter-btn">แข่งขัน</button>
                 <button onclick="filtercards('other')" class="filter-btn">อื่นๆ</button>
                 <div class="filter-btn-year">
-                    <a href="#year-2569" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2569</a>
-                    <a href="#year-2568" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2568</a>
-                    <a href="#year-2567" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2567</a>
-                    <a href="#year-2566" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2566</a>
-                    <a href="#year-2565" style="text-decoration: none; color: #000000; font-size: 20px; font-weight: 1000;" onclick="filtercards('all')">ปี 2565</a>
+                    <a href="#year-2569" class="filter-year-link" onclick="filtercards('all')">ปี 2569</a>
+                    <a href="#year-2568" class="filter-year-link" onclick="filtercards('all')">ปี 2568</a>
+                    <a href="#year-2567" class="filter-year-link" onclick="filtercards('all')">ปี 2567</a>
+                    <a href="#year-2566" class="filter-year-link" onclick="filtercards('all')">ปี 2566</a>
+                    <a href="#year-2565" class="filter-year-link" onclick="filtercards('all')">ปี 2565</a>
                 </div>
             </div>
 
-            <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="year-2569"> ปี 2569 </h1>
+            <!-- SECTION 1: เกียรติบัตรเด่น (Featured Certificates - Tech/Science/Leadership focused) -->
+            <div class="Certificates-year">
+                <h1 class="large-heading">เกียรติบัตรเด่น</h1>
+            </div>
+
+            <div class="card-certificates-container">
+                <!-- IoT Innovation Training - 2569 (Technology) -->
+                <div class="card-certificates" data-category="training">
+                        <img src="assets/images/c8-2569.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>อบรมเชิงปฎิบัติการใช้ IoT ในการสร้าง <br> นวัตกรรม</h2>
+                        </div>
+                </div>
+                <!-- Game Creation Competition - 2568 (Computer Science/Technology) -->
+                <div class="card-certificates" data-category="competition">
+                        <img src="assets/images/c4-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันสร้างสรรค์เกมจากคอมพิวเตอร์</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="card-certificates-container">
+                <!-- Leadership Training - 2568 (Leadership/Student Council) -->
+                <div class="card-certificates" data-category="training">
+                        <img src="assets/images/c7-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                                    <h2>อบรมความเป็นผู้นำ (เป็นสภานักเรียน)</h2>
+                        </div>
+                </div>
+                <!-- Science Invention Competition - 2565 (Science) -->
+                <div class="card-certificates" data-category="competition">
+                        <img src="assets/images/c17-2565.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                               <h2>แข่งขันสร้างสิ่งประดิษฐ์ทางวิทยาศาสตร์</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="card-certificates-container">
+                <!-- Math Competition - 2568 (Science/Mathematics) -->
+                <div class="card-certificates" data-category="competition">
+                        <img src="assets/images/c3-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>การแข่งขันคณิตศาสตร์ ซูโดกุ </h2>
+                        </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: เกียรติบัตรตามปีการศึกษา (Certificates by Academic Year - All certificates) -->
+            <div class="Certificates-year">
+                <h1 class="large-heading">เกียรติบัตรตามปีการศึกษา</h1>
+            </div>
+
+            <div class="Certificates-year">
+                <h1 class="large-heading" id="year-2569"> ปี 2569 </h1>
             </div>
             
 
@@ -219,8 +268,8 @@
                 </div>
             </div>
             
-            <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="year-2568"> ปี 2568 </h1>
+            <div class="Certificates-year">
+                <h1 class="large-heading" id="year-2568"> ปี 2568 </h1>
             </div>
 
 
@@ -300,13 +349,13 @@
                 
                 
 
-                <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="year-2567"> ปี 2567 </h1>
+                <div class="Certificates-year">
+                <h1 class="large-heading" id="year-2567"> ปี 2567 </h1>
             </div>
 
 
             <div class="card-certificates-container">
-                   <div class="card-certificates" data-category="competition">
+                   <div class="card-certificates" data-category="other">
                            <img src="assets/images/c14-2567.jpg" alt="" class="card-image-certificates">
                            <div class="card-content-certificates">
                                <h2>แข่งขันกีฬาอีสปอร์ต(ตัวแทนโรงเรียน)</h2>
@@ -315,19 +364,19 @@
                 </div>
 
 
-                 <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="year-2566"> ปี 2566 </h1>
+                 <div class="Certificates-year">
+                <h1 class="large-heading" id="year-2566"> ปี 2566 </h1>
             </div>
 
 
             <div class="card-certificates-container">
-                   <div class="card-certificates" data-category="competition">
+                   <div class="card-certificates" data-category="other">
                            <img src="assets/images/c16-2566.jpg" alt="" class="card-image-certificates">
                            <div class="card-content-certificates">
                                <h2>แข่งขันกีฬาอีสปอร์ต(ตัวแทนโรงเรียน)</h2>
                            </div>
                    </div>
-                   <div class="card-certificates" data-category="competition">
+                   <div class="card-certificates" data-category="other">
                            <img src="assets/images/c19-2566.jpg" alt="" class="card-image-certificates">
                            <div class="card-content-certificates">
                                <h2>แข่งขันดนตรีไทย</h2>
@@ -335,13 +384,13 @@
                    </div>
                 </div>
 
-                 <div class="Certificates-year" style="display: grid; justify-content: center; margin-top: 4rem;">
-                <h1 style="font-size: 45px; font-weight: 800;" id="year-2565"> ปี 2565 </h1>
+                 <div class="Certificates-year">
+                <h1 class="large-heading" id="year-2565"> ปี 2565 </h1>
             </div>
 
 
             <div class="card-certificates-container">
-                   <div class="card-certificates" data-category="competition">
+                   <div class="card-certificates" data-category="other">
                            <img src="assets/images/c15-2565.jpg" alt="" class="card-image-certificates">
                            <div class="card-content-certificates">
                                <h2>แข่งขันอีสปอร์ต</h2>
@@ -355,7 +404,7 @@
                    </div>
                 </div>
                 <div class="card-certificates-container">
-                   <div class="card-certificates" data-category="competition">
+                   <div class="card-certificates" data-category="other">
                            <img src="assets/images/c18-2565.jpg" alt="" class="card-image-certificates">
                            <div class="card-content-certificates">
                                <h2>แข่งขันคณิตศาสตร์ ซูโดกุ</h2>
@@ -363,6 +412,76 @@
                    </div>
                 </div>
 
+            <!-- SECTION 3: เกียรติบัตรทั่วไป (General Certificates - Volunteer/Ethics/General Activities) -->
+            <!-- เกียรติบัตรนี้ไม่เกี่ยวข้องกับเทคโนโลยี วิทยาศาสตร์ หรือผลงานหลัก แต่เป็นเกียรติบัตรด้านจิตอาสา คุณธรรม และกิจกรรมทั่วไป -->
+            <div class="Certificates-year">
+                <h1 class="large-heading">เกียรติบัตรทั่วไป</h1>
+            </div>
+
+            <div class="card-certificates-container">
+                <!-- Model Student Recognition - 2568 (General/Ethics) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c5-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>ยกย่องเป็นนักเรียนต้นแบบ</h2>
+                        </div>
+                </div>
+                <!-- Volunteer Forest Planting - 2568 (Volunteer) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c6-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>จิตอาสา-ปลูกป่า (ตัวแทนนักเรียน)</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="card-certificates-container">
+                <!-- Honesty Recognition - 2568 (Ethics) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c10-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>ยกย่องความซื่อสัตย์</h2>
+                        </div>
+                </div>
+                <!-- Anti-Corruption Training - 2568 (Ethics) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c12-2568.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>อบรมต้านทุจริต</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="card-certificates-container">
+                <!-- E-Sports Competition - 2567 (General Activity) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c14-2567.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>แข่งขันกีฬาอีสปอร์ต(ตัวแทนโรงเรียน)</h2>
+                        </div>
+                </div>
+                <!-- E-Sports Competition - 2566 (General Activity) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c16-2566.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>แข่งขันกีฬาอีสปอร์ต(ตัวแทนโรงเรียน)</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="card-certificates-container">
+                <!-- Thai Music Competition - 2566 (General Activity) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c19-2566.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>แข่งขันดนตรีไทย</h2>
+                        </div>
+                </div>
+                <!-- E-Sports Competition - 2565 (General Activity) -->
+                <div class="card-certificates" data-category="other">
+                        <img src="assets/images/c15-2565.jpg" alt="" class="card-image-certificates">
+                        <div class="card-content-certificates">
+                            <h2>แข่งขันอีสปอร์ต</h2>
+                        </div>
+                </div>
+            </div>
 
         </section>
                 
@@ -371,7 +490,7 @@
 
 
 
-        <!-- footer and pupup-->
+    <!-- FOOTER SECTION -->
 
     <footer class="footer-con">
         <div class="footer-maxsection">
@@ -379,13 +498,12 @@
             <section class="footer-about">
                 
                 <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
-                <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#"
-                    style="text-decoration: none; color: #4b5563; font-weight: 700;">Portfolio</a> และ <br><a
-                    href="#" style="text-decoration: none; color: #4b5563; font-weight: 700;">การทำโครงงานIS</a>
+                <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#" class="footer-meta-link">Portfolio</a> และ <br><a
+                    href="#" class="footer-meta-link">การทำโครงงานIS</a>
                     ระดับม.6โดยเฉพาะ
                     <br>เว็ปไซต์นี้เป็นผลงานจากความสามารถผู้ทำเองทั้งหมด <br>มีปัญญาประดิษฐ์ช่วยเหลือในการจัดเรียงข้อมูลและออกแบบเล็กน้อยเท่านั้น
-                    <br><span style="font-weight: 600; font-size: large;">ผู้จัดทำ</span><br>
-                    <a href="#" style="text-decoration: none; color: #4b5563;">นายวุฒิกร ปั้นนาค
+                    <br><span class="footer-highlight">ผู้จัดทำ</span><br>
+                    <a href="#" class="footer-meta-link">นายวุฒิกร ปั้นนาค
                         ม.6/1โรงเรียนพระบางวิทยา</a>
                 </p>
 
@@ -394,9 +512,9 @@
 
                 <h3>ปุ่มช่วยเหลือพิเศษ</h3>
 
-                <a href="#Home-web">หน้าแรก</a><br>
-                <a href="#certificates" style="text-decoration: none;">คลังผลงาน</a><br>
-                <a href="#" style="color: red;">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
+                <a href="#open-popup-home">หน้าแรก</a><br>
+                <a href="#certificates" class="footer-link">คลังผลงาน</a><br>
+                <a href="#" class="footer-alert-link">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a>
 
             </section>
             <section class="footer-contact">
@@ -417,7 +535,7 @@
     </footer>
 
 
-    <!-- popup  -->
+    <!-- POPUPS SECTION -->
 
 
     
@@ -429,28 +547,23 @@
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>
-                <p>
-                    <ul>
-                        <li>การฝึกทักษะดนตรี</li>
-                        <li>การจัดการความตื่นเต้น</li>
-                        <li>การทำงานเป็นทีม</li>
-                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
-                    </ul>
-                </p>
-                
-                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
-                <p>
-                    <li>
-                        <li>การบริหารพลังงานของน้องๆในวงดนตรี</li>
-                        <li>การเข้าใจน้องๆในวงได้ดีขีขึ้น</li>
-                        <li>ได้รับการยอมรับจากน้องๆในวงดนตรี</li>
-                    </ul>
-                </p>
+                <ul>
+                    <li>การฝึกทักษะดนตรี</li>
+                    <li>การจัดการความตื่นเต้น</li>
+                    <li>การทำงานเป็นทีม</li>
+                    <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                </ul>
+
+                <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
+                <ul>
+                    <li>การบริหารพลังงานของน้องๆในวงดนตรี</li>
+                    <li>การเข้าใจน้องๆในวงได้ดีขีขึ้น</li>
+                    <li>ได้รับการยอมรับจากน้องๆในวงดนตรี</li>
+                </ul>
             </div>
-            
             <div class="popup-footer">
                 <button class="close-popup" id="close-popup-c1">close</button>
-            </div>                        
+            </div>
         </div>
     </div>
     
@@ -462,28 +575,23 @@
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>
-                <p>
-                    <ul>
-                        <li>การพัฒนาทักษะการสร้างสรรค์</li>
-                        <li>การใช้โปรแกรมคอมพิวเตอร์ขั้นสูง</li>
-                        <li>การทำงานเป็นทีม</li>
-                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
-                    </ul>
-                </p>
-                
-                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
-                <p>
-                    <ul>
-                        <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
-                        <li>การทำงานร่วมกับทีมอย่างมีประสิทธิภาพ</li>
-                        <li>ได้รับความตื่นเต้นในการทำงาน</li>
-                    </ul>
-                </p>
+                <ul>
+                    <li>การพัฒนาทักษะการสร้างสรรค์</li>
+                    <li>การใช้โปรแกรมคอมพิวเตอร์ขั้นสูง</li>
+                    <li>การทำงานเป็นทีม</li>
+                    <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                </ul>
+
+                <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
+                <ul>
+                    <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
+                    <li>การทำงานร่วมกับทีมอย่างมีประสิทธิภาพ</li>
+                    <li>ได้รับความตื่นเต้นในการทำงาน</li>
+                </ul>
             </div>
             <div class="popup-footer">
                 <button class="close-popup" id="close-popup-c2">close</button>
-            </div>            
-            
+            </div>
         </div>
     </div>
     <!-- popup-C3 -->
@@ -494,33 +602,63 @@
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>
-                <p>
-                    <ul>
-                        <li>การเป็นผู้นำที่ดี</li>
-                        <li>การสื่อสารที่ดี</li>
-                        <li>การทำงานเป็นทีม</li>
-                        <li>การแก้ไขปัญหาเฉพาะหน้า</li>
-                    </ul>
-                </p>
-                
-                <h2 style="margin-top: 2rem;">ประสบการณ์ที่ได้รับ</h2>
-                <p>
-                    <ul>
-                        <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
-                        <li>การวางแผนและจัดทำโครงการ</li>
-                        <li>ได้จัดการปัญหาอย่างเป็นกลางและยุติธรรม</li>
-                    </ul>
-                </p>
+                <ul>
+                    <li>การเป็นผู้นำที่ดี</li>
+                    <li>การสื่อสารที่ดี</li>
+                    <li>การทำงานเป็นทีม</li>
+                    <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                </ul>
+
+                <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
+                <ul>
+                    <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
+                    <li>การวางแผนและจัดทำโครงการ</li>
+                    <li>ได้จัดการปัญหาอย่างเป็นกลางและยุติธรรม</li>
+                </ul>
             </div>
             <div class="popup-footer">
                 <button class="close-popup" id="close-popup-c3">close</button>
             </div>
-         </div>
+        </div>
     </div>
 
-    <!-- Script moved from root script.js to assets/js/script.js -->
-    <script src="assets/js/script.js"></script>
+    <!-- popup-home -->
+
+    <div class="overlay-popup-home" id="background-popup-home">
+        <div class="popup-box-home">
+            <div class="popup-head">
+                <h1>การทำงานสภานักเรียน</h1>
+            </div>
+            <div class="popup-main">
+                <h2>ทักษะที่ได้รับ</h2>
+                <ul>
+                    <li>การเป็นผู้นำที่ดี</li>
+                    <li>การสื่อสารที่ดี</li>
+                    <li>การทำงานเป็นทีม</li>
+                    <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                </ul>
+
+                <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
+                <ul>
+                    <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
+                    <li>การวางแผนและจัดทำโครงการ</li>
+                    <li>ได้จัดการปัญหาอย่างเป็นกลางและยุติธรรม</li>
+                </ul>
+            </div>
+            <div class="popup-footer">
+                <button class="close-popup" id="close-popup-home">close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- POPUPS SECTION END -->
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/filter.js"></script>
     <script src="assets/js/popup.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

@@ -1,0 +1,79 @@
+/* Certificate filters and certificate cards */
+.filter-btn {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    margin-top: 5rem;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+}
+
+.filter-btn:active,
+.filter-btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(37, 99, 235, 0.24);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn-year {
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.filter-year-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    text-decoration: none;
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filter-year-link:hover {
+    transform: translateY(-2px);
+    background-color: #dbeafe;
+}
+
+.Certificates-year {
+    display: grid;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.card-certificates {
+    width: 35%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-certificates:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+}

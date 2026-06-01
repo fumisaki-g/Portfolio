@@ -1,0 +1,90 @@
+/* Header and navigation */
+.header-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.95);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo h1 {
+    font-size: 1.75rem;
+    color: #1e40af;
+    letter-spacing: 0.04em;
+}
+
+.header-btn-con {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-btn {
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.header-btn:hover {
+    transform: translateY(-2px);
+    background-color: #eff6ff;
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+.header-btn a {
+    display: block;
+    padding: 0.9rem 1.4rem;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.header-nav2-con {
+    background-color: #2563eb;
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.nav-2-hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+.header-btn2-con {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-btn2 {
+    list-style: none;
+}
+
+.header-btn2 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header-btn2 a:hover {
+    color: #dbeafe;
+}
