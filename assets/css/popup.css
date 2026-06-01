@@ -1,75 +1,89 @@
-
-.overlay-popup {
+﻿.overlay-popup {
     display: none;
-     /* ควบคุมปิด-เปิด  */
+    /* ควบคุมปิด-เปิด  */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(91, 91, 91, 0.5);
+    background-color: rgba(15, 23, 42, 0.65);
     justify-content: center;
     align-items: center;
     z-index: 10000;
 }
 .popup-box {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 28px;
     width: 1000px;
     height: 650px;
     max-width: 100%;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
 }
 
 .popup-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 2700px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 32px 80px rgba(15, 23, 42, 0.18);
 }
-
 
 .popup-head {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
-    color: #111827;
-    margin-bottom: 1rem;
-    /* background-color: #ff0000; */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);}
-
+    font-size: 1.75rem;
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
 
 .popup-main {
-    margin-left: 3rem;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    padding-right: 1rem;
 }
 .popup-main p {
-    font-size: 1.2rem;
-    color: #111827;
+    font-size: 1rem;
+    color: #475569;
     margin-bottom: 1rem;
+    line-height: 1.8;
+}
+.popup-main ul {
+    margin: 1rem 0 1.5rem 1.25rem;
+    color: #475569;
+    list-style: disc;
+    line-height: 1.8;
+}
+.popup-main li {
+    margin-bottom: 0.75rem;
 }
 .popup-main a {
-    color: #1f2937;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 600;
 }
 .popup-main a:hover {
+    color: #1e40af;
     text-decoration: underline;
 }
 .close-popup {
-     /* ควบคุมปิด-เปิด  */
-     position: absolute;
-     /* left: 75%; */
-    background-color: #111827;
+    /* ควบคุมปิด-เปิด  */
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: #2563eb;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.65rem 1.2rem;
     border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 .close-popup:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.18);
+    background-color: #1e40af;
 }
 
 .popup-footer {
