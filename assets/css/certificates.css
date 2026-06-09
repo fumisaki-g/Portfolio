@@ -61,6 +61,8 @@
     display: grid;
     justify-content: center;
     margin-top: 4rem;
+    background-color: #6591ef;
+    padding: 0.9rem 1.4rem;
 }
 
 .card-certificates {
