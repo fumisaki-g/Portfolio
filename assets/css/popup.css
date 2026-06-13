@@ -76,7 +76,8 @@
     background-color: #2563eb;
     color: white;
     border: none;
-    padding: 0.65rem 1.2rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
     border-radius: 999px;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
@@ -186,11 +187,35 @@
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 28px;
-    width: 76%;
+    width: 60%;
     height: 75%;
     max-width: 100%;
     border: 1px solid rgba(226, 232, 240, 0.95);
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     position: relative;
+}
+
+.popup-box-certificate-s {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 28px;
+    width: 50%;
+    height: 75%;
+    max-width: 100%;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+}
+
+.popup-image-certificate-s {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 30px;
 }
