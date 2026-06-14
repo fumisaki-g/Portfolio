@@ -101,6 +101,7 @@ p {
     overflow: hidden;
     box-shadow: 0 18px 40px rgba(252, 255, 73, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .card-con:hover {

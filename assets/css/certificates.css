@@ -67,6 +67,7 @@
 
 .card-certificates {
     width: 35%;
+    cursor: pointer;
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 24px;
