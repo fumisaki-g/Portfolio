@@ -1,2 +1,269 @@
-/* Responsive styles are prepared here for future enhancements.
-   Current layout is preserved exactly as designed for desktop and tablet views. */
+/* Responsive styles for tablet and mobile screens.
+   แก้ส่วน: body และ main เพื่อป้องกันการล้นขอบแนวนอนจากองค์ประกอบที่กว้างเกินจอมือถือ */
+body,
+main {
+    overflow-x: hidden;
+}
+
+.header-menu-toggle {
+    display: none;
+}
+
+/* แก้ส่วน: แถบเนื้อหาหลักบนแท็บเล็ตให้ไม่กว้างเกินและไม่แออัดเกินไป */
+@media (max-width: 1024px) {
+    .card-con {
+        width: min(92vw, 900px);
+        margin: 2.25rem auto;
+    }
+
+    .card-con img {
+        height: 300px;
+    }
+
+    .section-row {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .card-certificates-container {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .popup-box,
+    .popup-box-certificate1,
+    .popup-box-certificate-s {
+        width: 92%;
+        height: auto;
+        max-height: 85vh;
+        padding: 1.25rem;
+        overflow-y: auto;
+    }
+}
+
+/* แก้ส่วน: header, cards และ popup บนมือถือเพื่อให้เรียงง่ายขึ้นและลดความเบียด */
+@media (max-width: 768px) {
+    .header-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.25rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        border: 1px solid #dbeafe;
+        border-radius: 999px;
+        background: #ffffff;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .header-menu-toggle span {
+        display: block;
+        width: 1.2rem;
+        height: 2px;
+        background: #2563eb;
+        border-radius: 999px;
+    }
+
+    .header-nav-con {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+    }
+
+    .header-logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-btn-con {
+        display: none;
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+        margin-top: 0.25rem;
+    }
+
+    .header-container.header-menu-open .header-btn-con {
+        display: flex;
+    }
+
+    .header-btn {
+        width: 100%;
+    }
+
+    .header-btn a {
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    .header-nav2-con {
+        display: none;
+        margin-top: 0.2rem;
+        padding: 0.45rem 0 0.55rem;
+        max-height: none;
+    }
+
+    .header-container.header-menu-open .header-nav2-con {
+        display: block;
+    }
+
+    .header-btn2-con {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .header-btn2 a {
+        display: inline-block;
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+    }
+
+    .card-mini {
+        width: 100%;
+        max-width: 450px;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0.75rem 0.5rem 1rem;
+        overflow-x: hidden;
+    }
+
+    .card-project,
+    .card-certificates {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-certificates-container {
+        gap: 1.25rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .section-title-row,
+    .section-row {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    .large-heading {
+        font-size: clamp(1.7rem, 5.4vw, 2.4rem);
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: clamp(1.6rem, 4.3vw, 2.1rem);
+    }
+
+    h2 {
+        font-size: clamp(1.1rem, 3vw, 1.35rem);
+    }
+
+    .card-content,
+    .card-content-certificates {
+        padding: 1rem 1rem 1.25rem;
+    }
+
+    .tag-project {
+        justify-content: center;
+        margin-right: 0;
+        flex-wrap: wrap;
+        padding: 0 1rem 1rem;
+    }
+
+    .btn-img-project {
+        position: static;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .filter-buttons {
+        padding: 0 1rem;
+    }
+
+    .filter-btn {
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    .filter-btn-year {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .popup-box,
+    .popup-box-home,
+    .popup-box-certificate1,
+    .popup-box-certificate-s {
+        width: 92%;
+        height: auto;
+        max-height: 85vh;
+        padding: 1.1rem;
+        overflow-y: auto;
+        margin-left: 0;
+        border-radius: 20px;
+    }
+
+    .popup-head {
+        font-size: 1.3rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .popup-main {
+        padding-right: 0;
+    }
+
+    .close-popup {
+        position: static;
+        width: 100%;
+        padding: 0.95rem 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .popup-image-certificate-1,
+    .popup-image-certificate-s {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* แก้ส่วน: จอมือถือขนาดเล็กมากเพื่อให้ข้อความและปุ่มไม่แน่นเกินไป */
+@media (max-width: 480px) {
+    .card-content p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .header-btn a {
+        font-size: 0.95rem;
+    }
+
+    .tag {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    .filter-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .filter-year-link {
+        padding: 0.55rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
