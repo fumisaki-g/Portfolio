@@ -45,35 +45,101 @@
     <main>
 
         <!-- HERO SECTION -->
-        <div class="section-title-row">
+        <div class="section-title-row" id="open-popup-home">
             <h1 class="large-heading"> ยินดีต้อนรับ </h1>
         </div>
         
-        <section class="card-con" id="open-popup-home">
-            <img src="assets/images/m5.jpg" alt="">
-            <div class="card-content">
-                <div class="center-column">
-                    <h2>นายวุฒิกร ปั้นนาค</h2>
-                    <h2 class="text-highlight-red">Vutthikorn Pannakh</h2>
-                </div>
-                <div class="row-center"> 
-                    <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
+       <section class="about-flex-container">
+    
+    <!-- ฝั่งที่ 1: คอลัมน์ข้อความ (แนะนำตัว + ทักษะความสามารถ) -->
+    <div class="about-text-col">
+        <div class="about-header">
+            <h1 class="large-heading">นายวุฒิกร ปั้นนาค</h1>
+            <p class="about-subtitle">ประวัติส่วนตัวและทักษะความสามารถ</p>
+        </div>
+        <!-- ฝั่งที่ 2: คอลัมน์รูปภาพด้านข้าง (ใช้โครงสร้างสไตล์คล้ายรูปตัวอย่างของคุณ) -->
+        <div class="about-image-col">
+            <div class="profile-image-wrapper">
+                <!-- วงกลมพื้นหลังกราฟิกสีเหลืองตามสไตล์ที่คุณชอบ -->
+                <div class="profile-bg-shape"></div>
+                <!-- ใส่ Path รูปภาพของคุณตรงนี้ (เปลี่ยนเป็น assets/images/รูปของคุณ.jpg) -->
+                <img src="assets/images/m5.jpg" alt="รูปถ่ายของฉัน" class="profile-img">
+            </div>
+        </div>
+        
+        <!-- ส่วนเนื้อหาแนะนำตัว -->
+        <div class="about-bio">
+            <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
                         มีประสบการณ์ในการสร้างเว็บไซต์ พัฒนาเกมจากโปรแกรมคอมพิวเตอร์
                         รวมถึงการศึกษาระบบปฏิบัติการและเทคโนโลยี IoT เพื่อประยุกต์ใช้ในการแก้ปัญหาในชีวิตจริง
                         มุ่งมั่นพัฒนาตนเองอย่างต่อเนื่องผ่านการเรียนรู้ การแข่งขัน และการเข้าร่วมกิจกรรมต่าง ๆ
-                        เพื่อเตรียมความพร้อมสู่การศึกษาต่อในระดับมหาวิทยาลัยด้านวิทยาการคอมพิวเตอร์
-                        ผู้มีความสนใจด้านเทคโนโลยี วิทยาการคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์
-                    </p>
+                        เพื่อเตรียมความพร้อมสู่การศึกษาต่อในระดับมหาวิทยาลัยด้านเทคโนโลยีสารสนเทศ
+                        ผู้มีความสนใจด้านเทคโนโลยี วิทยาการคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์</p>
+        </div>
+
+        <!-- ส่วนแสดงทักษะความสามารถแบบแถบหลอดระดับความสามารถ -->
+        
+        
+        <div class="about-skills-section">
+            <h3>ทักษะความสามารถ (Skills)</h3>
+            <div class="skills-grid">
+                
+                <!-- ทักษะที่ 1 -->
+                <div class="skill-bar-box">
+                    <div class="skill-info">
+                        <span class="tag tag-html">HTML5</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-desc-text">โครงสร้างเว็บ</div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill html-fill" style="width: 80%;"></div>
+                    </div>
                 </div>
-                <div class="row-right"> 
-                    <a href="#" class="text-action-link">ประวัติส่วนตัว</a>
+        
+                <!-- ทักษะที่ 2 -->
+                <div class="skill-bar-box">
+                    <div class="skill-info">
+                        <span class="tag tag-css">Linux Mint</span>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-desc-text">การจัดการระบบปฏิบัติการ</div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill css-fill" style="width: 60%;"></div>
+                    </div>
                 </div>
+        
+                <!-- ทักษะที่ 3 -->
+                <div class="skill-bar-box">
+                    <div class="skill-info">
+                        <span class="tag tag-js">Hardware Skill</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-desc-text">ซ่อมคอมพิวเตอร์ - การติดตั้งฮาร์ดแวร์</div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill js-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+        
+                <!-- ทักษะที่ 4 -->
+                <div class="skill-bar-box">
+                    <div class="skill-info">
+                        <span class="tag tag-win">Software Skill</span>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-desc-text">การใช้งานโปรแกรมต่าง ๆ เช่น GitHub, VS Code, Git (Terminal)</div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill win-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+        
             </div>
-        </section>
+        </div>
+    </section>
         
         <!-- ACTIVITIES SECTION -->
-        <div class="section-row">
-            <h1 class="large-heading" id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
+         <div class="scroll-reveal">
+        <div class="section-row " >
+            <h1 class="large-heading " id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
         </div>
         
         <div class="slider-card">
@@ -81,44 +147,79 @@
             <div class="project-card">
                 
                 <section class="card-mini" id="open-popup-c1">
-                    <img src="assets/images/m2.jpg" alt="">
+                    <img src="assets/images/m8.jpg" alt="">
                     <div class="card-content">
-                        <h2>OPEN HOUSE KU KPS</h2>
+                        <h2 style="color:pink;">กีฬาสี</h2>
                         <p>
-                            บันทึกสิ่งที่ได้กลับมา คณะที่ได้ไปเดินดู และของที่ระลึกจากงานเปิดบ้านเกษตรศาสตร์ กำแพงแสน
+                            ได้เข้าร่วมกิจกรรมกีฬาสีของโรงเรียน โดยเป็นตัวแทนของห้องในการแข่งขันกีฬาประเภทต่าง ๆ เช่น บาสเกตบอล ได้รับรางวัลรองชนะเลิศอันดับที่ 1 อีกทั้งยังเป็นตัวแทนของคณะสี ในการเป็นพลธงที่เป็นคนสำคัญของคณะสีในการแข่งขันกีฬาสีของโรงเรียน
                         </p>
                     </div>
                 </section>
                 <section class="card-mini" id="open-popup-c2">
-                    <img src="assets/images/a1-2.jpg" alt="">
+                    <img src="assets/images/p-5.jpg" alt="">
                     <div class="card-content">
-                        <h2>แข่งขันสร้างเกมจากโปรแกรมคอมพิวเตอร์</h2>
+                        <h2 style="color: #059669;">OPEN HOUSE KU KPS</h2>
                         <p>
-                            แข่งขันศิลปหัตกรรม สร้างสรรค์เกมจากคอมพิวเตอร์ ครั้งที่ 73 ณ โรงเรียนนครสวรรค์
-                            ได้รับรางวัลเหรียญทอง
-                            คะแนน 89 คะแนน เป็นเกมแนว 2D เน้นการพัฒนาความคิดแบบ Logic โดยใช้เวลาฝึกซ้อมเพียงแค่ 1
-                            สัปดาห์
+                            ได้ไปเข้าร่วมกิจกรรม OPEN HOUSE KU KPS ที่มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน ได้เปิดโลกกว้างเกี่ยวกับการเรียนด้านวิทยาศาสตร์และเทคโนโลยีสารสนเทศ โดยการเดินทางมีการวางแผนและเดินทางไปเองจากนครสวรรค์ทั้งหมด ไปคนเดียวได้รู้ซึ้งถึงการวางแผนและค่าใช้จ่ายอย่างรอบคอบ
                         </p>
                     </div>
                 </section>
                 <section class="card-mini" id="open-popup-c3">
-                    <img src="assets/images/a3.png" alt="">
+                    <img src="assets/images/m6.jpg" alt="">
                     <div class="card-content">
-                        <h2>การเป็นโค้ชที่ดี</h2>
+                        <h2>โต้วาที กิจกรรมวันภาษาไทย</h2>
                         <p>
-                            ได้รับการอบรมการเป็นโค้ชที่ดีแก่นักกีฬา ที่จัดขึ้นโดยมหาวิทยาลัยสวนสุนันทา
-                            ได้รับความสามารถในการสื่อสารที่ดีต่อลูกทีมและได้วิทยาการที่เป็นเทคนิคส่วนตัวจากวิทยากรแต่ละท่านเพิ่มเติม
-                            เช่น เทคนิคการใช้จิตวิทยา และ การคำนวนรูปแบบของทีม
+                            ได้เข้าร่วมการแข่งขันโต้วาที จากกิจกรรมวันภาษาไทยของโรงเรียน โดยเป็นตัวแทนของห้องในการแข่งขันโต้วาทีในหัวข้อที่กำหนด ได้ฝึกทักษะการพูด การวิเคราะห์ และการตอบโต้ความคิดเห็นของฝ่ายตรงข้ามอย่างมีเหตุผล พร้อมทั้งได้รับรางวัลชนะเลิศอันดับที่ 1 ของการแข่งขันโต้วาทีในครั้งนี้
                         </p>
                     </div>
                 </section>
             </div>
         </div>
+        </div>
+
+        <!-- Section รวบรวมกิจกรรมที่เคยเข้าร่วม (เข้าธีม Dashboard + เฟดอัตโนมัติ) -->
+<section class="about-skills-section scroll-reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
+    <h3>กิจกรรมที่เคยเข้าร่วม (Activities)</h3>
+    <div class="skills-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
+        
+        <!-- กิจกรรมที่ 1 -->
+        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="skill-info">
+                <span class="tag tag-html" style="background-color: #ecfdf5; color: #059669;">อบรม</span>
+                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2569</span>
+            </div>
+            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">•อบรมการสร้างนวัฒกรรมด้วยเทคโนโลยี IoT</h4>
+            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
+                เข้าร่วมอบรมเชิงปฏิบัติการการสร้างนวัตกรรมด้วยเทคโนโลยี IoT จัดโดยมหาวิทยาลัยราชภัฏนครสวรรค์
+                เพื่อศึกษาการเชื่อมต่ออุปกรณ์กับเครือข่ายอินเทอร์เน็ตและการควบคุมระยะไกล
+                โดยผู้เข้าร่วมอบรมได้ทดลองออกแบบวงจรและเขียนโปรแกรมควบคุมอุปกรณ์ด้วยตนเอง
+            </p>
+        </div>
+
+        <!-- กิจกรรมที่ 2 -->
+        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="skill-info">
+                <span class="tag tag-css" style="background-color: #fff7ed; color: #ea580c;">การแข่งขัน</span>
+                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2568</span>
+            </div>
+            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">• แข่งขันสร้างเกมจากโปรแกรมคอมพิวเตอร์</h4>
+            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
+               แข่งขันศิลปหัตกรรม สร้างสรรค์เกมจากคอมพิวเตอร์ ครั้งที่ 73 ณ โรงเรียนนครสวรรค์ได้รับรางวัลเหรียญทองคะแนน 89 คะแนน เป็นเกมแนว 2D เน้นการพัฒนาความคิดแบบ Logic โดยใช้เวลาฝึกซ้อมเพียงแค่ 1สัปดาห์
+            </p>
+        </div>
+
+        
+
+    </div>
+</section>
+
+
 
 
 
 
         <!-- PROJECTS SECTION -->
+         <div class="scroll-reveal">
         <div class="section-row">
             <h1 class="large-heading" id="projects-goals"> ผลงาน - เป้าหมาย <br>ในปัจจุบัน ขณะนี้</h1>
         </div>
@@ -188,7 +289,7 @@
         <div class="card-content-certificates">
             <h2>เป้าหมายทางการศึกษา</h2>
             <p>
-                มุ่งเข้าศึกษาต่อในสาขาวิทยาการคอมพิวเตอร์
+                มุ่งเข้าศึกษาต่อในสาขาเทคโนโลยีสารสนเทศ
                 เพื่อพัฒนาความรู้ด้านการพัฒนาโปรแกรม
                 การออกแบบเว็บไซต์ และเทคโนโลยีสมัยใหม่
                 โดยมีเป้าหมายในการสร้างซอฟต์แวร์และระบบที่สามารถนำไปใช้งานได้จริง
@@ -203,10 +304,11 @@
                 </div>
             </div>
         </section>
+        </div>
 
         <!-- CERTIFICATES SECTION -->
 
-
+ <div class="scroll-reveal">
     
         <section class="Certificates-contrainer">
             <div class="Certificates-year" style="box-shadow: 0px 20px 40px#1e40af;">
@@ -272,6 +374,7 @@
                             <h2>การแข่งขันคณิตศาสตร์ ซูโดกุ </h2>
                         </div>
                 </div>
+            </div>
             </div>
 
 
@@ -636,12 +739,12 @@
     <div class="overlay-popup" id="background-popup-c1">
         <div class="popup-box">
             <div class="popup-head">
-                <h1>การบรรเลงดนตรีไทย</h1>
+                <h1>กีฬาสี</h1>
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>
                 <ul>
-                    <li>การฝึกทักษะดนตรี</li>
+                    <li>ทักษะการสื่อสารที่ดีขึ้น</li>
                     <li>การจัดการความตื่นเต้น</li>
                     <li>การทำงานเป็นทีม</li>
                     <li>การแก้ไขปัญหาเฉพาะหน้า</li>
@@ -649,9 +752,9 @@
 
                 <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
                 <ul>
-                    <li>การบริหารพลังงานของน้องๆในวงดนตรี</li>
-                    <li>การเข้าใจน้องๆในวงได้ดีขีขึ้น</li>
-                    <li>ได้รับการยอมรับจากน้องๆในวงดนตรี</li>
+                    <li>การบริหารพลังงานน้องๆในสี</li>
+                    <li>การเข้าใจน้องๆในสีได้ดีขึ้น</li>
+                    <li>ได้รับการยอมรับจากน้องๆในสี</li>
                 </ul>
             </div>
             <div class="popup-footer">
@@ -664,22 +767,22 @@
     <div class="overlay-popup" id="background-popup-c2">
         <div class="popup-box">
             <div class="popup-head">
-                <h2 style="color: black;">การแข่งขันศิลปะหัตกรรมนักเรียนปีที่ 73 การแข่งขันสร้างสรรค์เกมจากโปรแกรมคอมพิวเตอร์</h2>
+                <h2 style="color: black;">OPEN HOUSE KU KPS</h2>
             </div>
             <div class="popup-main">
-                <h2>ทักษะที่ได้รับ</h2>
+                <h2>คณะที่เข้าร่วมกิจกรรม</h2>
                 <ul>
-                    <li>การพัฒนาทักษะการสร้างสรรค์</li>
-                    <li>การใช้โปรแกรมคอมพิวเตอร์ขั้นสูง</li>
-                    <li>การทำงานเป็นทีม</li>
-                    <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+                    <li>คณะศิลปศาสตร์และวิทยาศาสตร์</li>
+                    <li>คณะวิศวกรรมศาสตร์</li>
+                    <li>คณะวิทยาศาสตร์การกีฬาและสุขภาพ</li>
+                    <li>คณะอุตสาหกรรมบริการ</li>
                 </ul>
 
                 <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
                 <ul>
-                    <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
-                    <li>การทำงานร่วมกับทีมอย่างมีประสิทธิภาพ</li>
-                    <li>ได้รับความตื่นเต้นในการทำงาน</li>
+                    <li>ได้เปิดโลกกว้างและพร้อมทั้งได้ mind set ใหม่</li>
+                    <li>พบปะกับเพื่อนใหม่</li>
+                    <li>รู้จักคณะที่ชอบลึกขึ้น และได้รู้ว่าเหมาะสมหรือไม่</li>
                 </ul>
             </div>
             <div class="popup-footer">
@@ -691,21 +794,21 @@
     <div class="overlay-popup" id="background-popup-c3">
         <div class="popup-box">
             <div class="popup-head">
-                <h1>การทำงานสภานักเรียน</h1>
+                <h1>การโต้วาที</h1>
             </div>
             <div class="popup-main">
                 <h2>ทักษะที่ได้รับ</h2>
                 <ul>
-                    <li>การเป็นผู้นำที่ดี</li>
+                    <li>การฟังอย่างตั้งใจ</li>
                     <li>การสื่อสารที่ดี</li>
-                    <li>การทำงานเป็นทีม</li>
+                    <li>การวิเคราะห์ปัญหา</li>
                     <li>การแก้ไขปัญหาเฉพาะหน้า</li>
                 </ul>
 
                 <h2 class="mt-2rem">ประสบการณ์ที่ได้รับ</h2>
                 <ul>
-                    <li>การบริหารจัดการเวลาอย่างมีประสิทธิภาพ</li>
-                    <li>การวางแผนและจัดทำโครงการ</li>
+                    <li>การได้ฝึกไหวพริบได้เร็วมากขึ้น</li>
+                    <li>ลดความตื่นเต้นเวลาขึ้นหน้าเวทีและพูดให้ทุกคนฟัง</li>
                     <li>ได้จัดการปัญหาอย่างเป็นกลางและยุติธรรม</li>
                 </ul>
             </div>
@@ -1026,7 +1129,60 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/popupcertificate.js"></script>
     <script src="assets/js/animationcursor.js"></script>
+    <script src="assets/js/fade.js"></script>
+    <script src="assets/js/ai.js"></script>
 
+
+    <!-- ========================================== -->
+<!-- AI CHAT WIDGET (NEW FEATURE)               -->
+<!-- ========================================== -->
+
+<!-- ปุ่มกลมๆ ลอยอยู่มุมขวาล่าง -->
+<!-- ========================================== -->
+<!-- UPGRADED AI CHAT WIDGET (WITH QUICK TAGS)  -->
+<!-- ========================================== -->
+
+<!-- ปุ่มกลมลอยมุมจอ -->
+<div class="ai-chat-launcher" id="aiChatLauncher">
+    <span>🤖</span>
+</div>
+
+<!-- หน้าต่างแชท -->
+<div class="ai-chat-window" id="aiChatWindow">
+    <div class="ai-chat-header">
+        <div class="ai-status-container">
+            <div class="ai-avatar">🤖</div>
+            <div>
+                <h4>ผู้ช่วย AI ประจำพอร์ต</h4>
+                <p class="ai-status-text">ออaไลน์ • พร้อมตอบภาษาไทย</p>
+            </div>
+        </div>
+        <button class="ai-close-btn" id="aiCloseBtn">&times;</button>
+    </div>
+    
+    <!-- พื้นที่แสดงข้อความ -->
+    <div class="ai-chat-body" id="aiChatBody">
+        <div class="message ai-message">
+            สวัสดีครับ! ผมคือบอทผู้ช่วยส่วนตัว ยินดีต้อนรับเข้าสู่พอร์ตโฟลิโอครับ ยินดีตอบคำถามเกี่ยวกับประวัติ ทักษะ หรือช่องทางการติดต่อครับ
+        </div>
+        
+        <!-- โซนคำถามตัวอย่าง (Quick Replies) -->
+        <div class="ai-quick-tags" id="aiQuickTags">
+    <p style="font-size: 0.8rem; color: #64748b; margin: 0 0 0.5rem 0; font-weight: 600;">💡 คำถามแนะนำที่คลิกถามได้เลย:</p>
+    <button class="quick-tag-btn">แนะนำตัวให้ฟังหน่อย</button>
+    <button class="quick-tag-btn">ทักษะด้าน Linux ทำอะไรได้บ้าง?</button>
+    <button class="quick-tag-btn">ขอดูด้าน Hardware / Software หน่อย</button>
+    <button class="quick-tag-btn">เป้าหมายในอนาคตคืออะไร?</button>
+    <button class="quick-tag-btn">ขอช่องทางการติดต่อหน่อยครับ</button>
+</div>
+    </div>
+    
+    <!-- ช่องพิมพ์ข้อความ -->
+    <div class="ai-chat-footer">
+        <input type="text" id="aiChatInput" placeholder="พิมพ์ถามคำถามภาษาไทยที่นี่..." autocomplete="off">
+        <button id="aiSendBtn">ส่ง</button>
+    </div>
+</div>
 </body>
 
 </html>
