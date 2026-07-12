@@ -9,6 +9,8 @@
     <title>Vutthikorn Website</title>
     <!-- Load main CSS entrypoint only -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- วางโค้ดนี้ในไฟล์ HTML ของคุณ -->
+    <audio id="bgMusic" src="assets/sound/ai-sound.mp3" loop></audio>
 </head>
 
 <body>
@@ -1158,6 +1160,7 @@
                 <p class="ai-status-text">ออฟไลน์ • พร้อมตอบภาษาไทย</p>
             </div>
         </div>
+        <button id="aiMuteBtn" class="ai-sound-btn" title="ปิดเพลง">🔊</button>
         <button class="ai-close-btn" id="aiCloseBtn">&times;</button>
     </div>
     
@@ -1171,7 +1174,7 @@
         <div class="ai-quick-tags" id="aiQuickTags">
     <p style="font-size: 0.8rem; color: #64748b; margin: 0 0 0.5rem 0; font-weight: 600;">💡 คำถามแนะนำที่คลิกถามได้เลย:</p>
     <button class="quick-tag-btn">แนะนำตัวให้ฟังหน่อย</button>
-    <button class="quick-tag-btn">ทักษะด้าน Linux ทำอะไรได้บ้าง?</button>
+    <button class="quick-tag-btn">ปิดเพลงยังไง</button>
     <button class="quick-tag-btn">ขอดูด้าน Hardware / Software หน่อย</button>
     <button class="quick-tag-btn">เป้าหมายในอนาคตคืออะไร?</button>
     <button class="quick-tag-btn">ขอช่องทางการติดต่อหน่อยครับ</button>

@@ -1,0 +1,18 @@
+/* แต่งปุ่มปรับเสียงให้สวยงามและเข้ากับปุ่มเดิม */
+.ai-sound-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 8px; /* เว้นระยะห่างจากปุ่มปิดแชทเล็กน้อย */
+    transition: transform 0.1s ease;
+}
+
+.ai-sound-btn:hover {
+    transform: scale(1.1); /* ขยายใหญ่ขึ้นนิดนึงตอนเอาเมาส์มาชี้ */
+}
+
+.ai-sound-btn:active {
+    transform: scale(0.95); /* ยุบตัวลงเล็กน้อยตอนกด */
+}
