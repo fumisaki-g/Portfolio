@@ -39,7 +39,7 @@ function bindDesktopInteractions() {
         return;
     }
 
-    // แก้ไข: คงฟีเจอร์ hover ของเมนูหลักไว้บนเดสก์ท็อปเพื่อไม่ให้ความสามารถเดิมหายไป
+   
     tab1.addEventListener('mouseenter', handleTab1Enter);
     tab1.addEventListener('mouseleave', handleTab1Leave);
     tab2.addEventListener('mouseenter', handleTab2Enter);
@@ -73,7 +73,7 @@ function toggleMobileMenu() {
         return;
     }
 
-    // แก้ไข: ใช้ปุ่มเมนูมือถือเปิด-ปิดเพื่อช่วยลดความเบียดบนหน้าจอเล็กและให้แตะง่ายขึ้น
+   
     const isOpen = headerContainer.classList.toggle('header-menu-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
 }

@@ -1,5 +1,4 @@
-/* Responsive styles for tablet and mobile screens.
-   แก้ส่วน: body และ main เพื่อป้องกันการล้นขอบแนวนอนจากองค์ประกอบที่กว้างเกินจอมือถือ */
+
 body,
 main {
     overflow-x: hidden;
@@ -9,7 +8,6 @@ main {
     display: none;
 }
 
-/* แก้ส่วน: แถบเนื้อหาหลักบนแท็บเล็ตให้ไม่กว้างเกินและไม่แออัดเกินไป */
 @media (max-width: 1024px) {
     .card-con {
         width: min(92vw, 900px);
@@ -40,7 +38,6 @@ main {
     }
 }
 
-/* แก้ส่วน: header, cards และ popup บนมือถือเพื่อให้เรียงง่ายขึ้นและลดความเบียด */
 @media (max-width: 768px) {
     .header-menu-toggle {
         display: flex;
@@ -241,7 +238,6 @@ main {
     }
 }
 
-/* แก้ส่วน: จอมือถือขนาดเล็กมากเพื่อให้ข้อความและปุ่มไม่แน่นเกินไป */
 @media (max-width: 480px) {
     .card-content p {
         font-size: 0.9rem;

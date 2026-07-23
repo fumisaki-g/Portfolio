@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatBody = document.getElementById("aiChatBody");
     const quickTags = document.getElementById("aiQuickTags");
 
-    // ==========================================
-    // ระบบเพลงคลอเบื้องหลัง (ดึงจาก HTML)
-    // ==========================================
     const muteBtn = document.getElementById("aiMuteBtn");
     const bgMusic = document.getElementById("bgMusic"); // ดึงแท็กเสียงจาก HTML
 
@@ -18,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     let isPlaying = false;
 
-    // ฟังก์ชันสำหรับสั่งเริ่มเล่นเพลง
+
     function startMusic() {
         if (bgMusic && !isPlaying) {
             isPlaying = true;
@@ -28,27 +25,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             bgMusic.play()
                 .then(() => {
-                    // ถ้าเพลงเล่นสำเร็จ ให้ลบการดักจับออกทันทีเพื่อประหยัดทรัพยากร
+                   
                     window.removeEventListener("scroll", startMusic);
                     document.removeEventListener("click", startMusic);
                 })
                 .catch(e => {
-                    isPlaying = false; // ถ้าเบราว์เซอร์ยังบล็อกอยู่ ให้รีเซ็ตค่าเพื่อรอการคลิกครั้งต่อไป
+                    isPlaying = false; 
                     console.log("Browser บล็อกเสียงชั่วคราว กำลังรอการปฏิสัมพันธ์เพิ่มเติม:", e);
                 });
         }
     }
 
-    // ดักจับทั้งการเลื่อนหน้าจอ และการคลิกส่วนใดก็ได้บนเว็บครั้งแรก เพื่อสั่งเปิดเพลงทันที
+    
     window.addEventListener("scroll", startMusic);
     document.addEventListener("click", startMusic);
 
-    // ระบบปุ่มกดสลับ เปิด-ปิด เสียงเพลงด้วยตัวเอง (ไม่ทำให้กล่องแชทปิด)
+  
     if (muteBtn && bgMusic) {
         muteBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // ล็อกไม่ให้เหตุการณ์คลิกทะลุไปสั่งปิดกล่องแชทใหญ่
+            e.stopPropagation(); 
             
-            isPlaying = !isPlaying; // สลับสถานะ เล่น <-> หยุด
+            isPlaying = !isPlaying; 
             
             if (isPlaying) {
                 muteBtn.innerText = "🔊";
@@ -57,14 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 muteBtn.innerText = "🔇";
                 muteBtn.title = "เปิดเพลง";
-                bgMusic.pause(); // สั่งหยุดเพลงชั่วคราว
+                bgMusic.pause(); 
             }
         });
     }
 
-    // ==========================================
-    // ระบบควบคุมหน้าต่างแชทบอท
-    // ==========================================
+
     if (launcher && windowChat) {
         launcher.addEventListener("click", () => {
             const isHidden = window.getComputedStyle(windowChat).display === "none";
@@ -77,9 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
         closeBtn.addEventListener("click", () => { windowChat.style.display = "none"; });
     }
 
-    // ==========================================
-    // สมอง AI ประมวลผลคำตอบ
-    // ==========================================
     function handleAIResponse(inputText) {
         if (quickTags) quickTags.style.display = "none"; 
         appendMessage(inputText, "user-message");
@@ -152,9 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 600);
     }
 
-    // ==========================================
-    // ระบบอีเวนต์ส่งข้อความ
-    // ==========================================
+
     document.querySelectorAll(".quick-tag-btn").forEach(button => {
         button.addEventListener("click", function () {
             handleAIResponse(this.innerText);
@@ -175,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ฟังก์ชันสร้างกล่องข้อความบนหน้าจอ
+ 
     function appendMessage(text, className) {
         if (!chatBody) return;
         const msgDiv = document.createElement("div");

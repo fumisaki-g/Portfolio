@@ -1,6 +1,5 @@
 ﻿.overlay-popup {
     display: none;
-    /* ควบคุมปิด-เปิด  */
     position: fixed;
     top: 0;
     left: 0;
@@ -69,7 +68,6 @@
     text-decoration: underline;
 }
 .close-popup {
-    /* ควบคุมปิด-เปิด  */
     position: absolute;
     right: 2rem;
     bottom: 2rem;
@@ -118,7 +116,6 @@
 
 .overlay-popup-home {
   display: none;
-    /* ควบคุมปิด-เปิด  */
     position: fixed;
     top: 0;
     left: 0;

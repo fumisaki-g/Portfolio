@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.15 // เลื่อนเห็น 15% แล้วให้เฟดขึ้นมา
+        threshold: 0.15 
     };
 
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("active"); // เติมคลาสให้เฟดคืนมา
+                entry.target.classList.add("active"); 
             } else {
-                entry.target.classList.remove("active"); // เลื่อนหนีให้ซ่อนลงไป
+                entry.target.classList.remove("active"); 
             }
         });
     }, observerOptions);

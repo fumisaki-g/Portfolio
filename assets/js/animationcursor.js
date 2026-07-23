@@ -36,15 +36,15 @@ document.querySelectorAll('a[href]').forEach(link => {
     });
 });
 
-// ✅ แก้ปัญหา "กดปุ่มกลับมาหน้าเดิม (Back) แล้วแอนิเมชั่นค้าง"
+
 window.addEventListener('pageshow', function(event) {
-    // ถ้าระบบตรวจพบว่าหน้าเว็บนี้ถูกดึงมาจากแคชตอนกด Back/Forward
+  
     if (event.persisted) {
         setLoadingOverlay(false);
     }
 });
 
-// ✅ ป้องกันไว้เผื่อโหลดเสร็จในหน้าปกติ ให้ซ่อนด้วย
+
 window.addEventListener('load', function() {
     setLoadingOverlay(false);
 });
