@@ -1,11 +1,28 @@
+
 .Time-countdown-container {
     display: flex;
-    margin-top: 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
+    margin-top: 30px;
+    padding: 20px 15px;
+    width: 100%;
+    max-width: 800px;             
+    margin-left: auto;         
+    margin-right: auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(8px);
+    border-radius: 16px;          
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+}
+
+.Time-countdown-container h3 {
+    margin: 0 0 15px 0;
+    font-size: clamp(1rem, 3.5vw, 1.3rem); 
+    color: #333333;
+    text-align: center;
+    font-weight: 600;
 }
 
 
@@ -13,7 +30,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    font-size: 2rem;
-    color: #000000;
+    flex-wrap: wrap;              
+    gap: 8px 12px;             
+    width: 100%;
+    color: #1e293b;
+}
+
+
+.Time-countdown-layout h2 {
+    margin: 0;
+    font-size: clamp(0.75rem, 2.5vw, 1.1rem);
+    font-weight: 700;
+    color: #64748b;             
+    letter-spacing: 1px;
+}
+
+.Time-countdown-layout span {
+    font-size: clamp(1.1rem, 4vw, 1.8rem); 
+    font-weight: 800;
+    color: #2563eb;               
+    background: #f1f5f9;         
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-family: monospace;    
+    min-width: 40px;
+    text-align: center;
+}
+
+
+.Time-countdown-layout span:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 480px) {
+    .Time-countdown-layout span:not(:last-child) {
+        margin-right: 4px;
+    }
+    .Time-countdown-layout {
+        gap: 6px 8px;
+    }
 }
