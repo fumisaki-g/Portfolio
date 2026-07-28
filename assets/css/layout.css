@@ -305,13 +305,22 @@ p {
     gap: 1.5rem;
 }
 
-/* กล่องพ่วงรายละเอียดหลอดพลัง */
+
 .skill-bar-box {
-    background: #ffffff;
+    background: #ffffffff;
     padding: 1.25rem;
     border-radius: 20px;
-    border: 1px solid #e2e8f0; /* ขอบสีเทาอ่อนตามธีมเดิม */
+    border: 1px solid #e2e8f0;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-bar-box .tag {
+    margin: 0;
+    position: static;
+    flex-shrink: 0;
 }
 
 .skill-info {
@@ -408,7 +417,7 @@ p {
     transform: translateX(4px);
 }
 
-/* --- (สไตล์หลักอื่นๆ คงไว้เหมือนเดิม เพื่อความลื่นไหล) --- */
+
 .ai-chat-launcher { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background-color: #2563eb; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3); z-index: 9999; transition: transform 0.25s ease, background-color 0.25s ease; }
 .ai-chat-launcher:hover { transform: scale(1.1) translateY(-2px); background-color: #1e40af; }
 .ai-chat-window { position: fixed; bottom: 6.5rem; right: 2rem; width: 360px; height: 500px; background-color: #ffffff; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12); display: none; flex-direction: column; overflow: hidden; z-index: 9999; }

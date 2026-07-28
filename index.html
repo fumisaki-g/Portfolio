@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Vutthikorn Panenak, showcasing personal information, skills, activities, projects, and certificates.">
     
     
     <title>Vutthikorn Website</title>
@@ -27,7 +28,7 @@
             <ul class="header-btn-con">
                 <li class="header-btn"><a href="#open-popup-home">หน้าหลัก</a></li>
                 <li class="header-btn"><a href="#certificates">หน้าเกียรติบัตร</a></li>
-                <li class="header-btn"><a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk" download="EARTH-NOTE version 0.1 Thai .apk">Earth NOTE (แอพพลิเคชั่น)</a></li>
+                <li class="header-btn "><a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk" download="EARTH-NOTE version 0.1 Thai .apk">Earth NOTE (แอพพลิเคชั่น)</a></li>
                 <li class="header-btn"><a href="https://github.com/fumisaki-g">Github</a></li>
             </ul>
         </nav>
@@ -48,26 +49,24 @@
         <div class="section-title-row" id="open-popup-home">
             <h1 class="large-heading"> ยินดีต้อนรับ </h1>
         </div>
-        
+        </div>
        <section class="about-flex-container">
-    
-    <!-- ฝั่งที่ 1: คอลัมน์ข้อความ (แนะนำตัว + ทักษะความสามารถ) -->
-    <div class="about-text-col">
-        <div class="about-header">
-            <h1 class="large-heading">นายวุฒิกร ปั้นนาค</h1>
-            <p class="about-subtitle">ประวัติส่วนตัวและทักษะความสามารถ</p>
-        </div>
-        <!-- ฝั่งที่ 2: คอลัมน์รูปภาพด้านข้าง (ใช้โครงสร้างสไตล์คล้ายรูปตัวอย่างของคุณ) -->
-        <div class="about-image-col">
-            <div class="profile-image-wrapper">
-                <!-- วงกลมพื้นหลังกราฟิกสีเหลืองตามสไตล์ที่คุณชอบ -->
-                <div class="profile-bg-shape"></div>
-                <!-- ใส่ Path รูปภาพของคุณตรงนี้ (เปลี่ยนเป็น assets/images/รูปของคุณ.jpg) -->
-                <img src="assets/images/m5.jpg" alt="รูปถ่ายของฉัน" class="profile-img">
+    <div class="scroll-reveal">
+
+        <div class="about-text-col">
+            <div class="about-header">
+                <h1 class="large-heading">นายวุฒิกร ปั้นนาค</h1>
+                <p class="about-subtitle">ประวัติส่วนตัวและทักษะความสามารถ</p>
             </div>
-        </div>
-        
-        <!-- ส่วนเนื้อหาแนะนำตัว -->
+            <div class="about-image-col">
+                <div class="profile-image-wrapper">
+                    <div class="profile-bg-shape"></div>
+                    <img src="assets/images/m5.jpg" alt="รูปถ่ายของฉัน" class="profile-img">
+                </div>
+            </div>
+            
+    </div>
+    <div class="scroll-reveal">
         <div class="about-bio">
             <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
                         มีประสบการณ์ในการสร้างเว็บไซต์ พัฒนาเกมจากโปรแกรมคอมพิวเตอร์
@@ -76,77 +75,103 @@
                         เพื่อเตรียมความพร้อมสู่การศึกษาต่อในระดับมหาวิทยาลัยด้านเทคโนโลยีสารสนเทศ
                         ผู้มีความสนใจด้านเทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์</p>
         </div>
+    </div>
 
-        <!-- แสดงทักษะความสามารถแบบแถบหลอดระดับความสามารถ -->
         
         
         <div class="about-skills-section">
             <h3>ทักษะความสามารถ (Skills)</h3>
-            <div class="skills-grid">
+            
                 
                 <!-- ทักษะที่ 1 -->
-                <div class="skill-bar-box">
-                    <div class="skill-info">
-                        <span class="tag tag-html">HTML5</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="skill-desc-text">โครงสร้างเว็บ</div>
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill html-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-        
-                <!-- ทักษะที่ 2 -->
-                <div class="skill-bar-box">
-                    <div class="skill-info">
-                        <span class="tag tag-css">Linux Mint</span>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="skill-desc-text">การจัดการระบบปฏิบัติการ</div>
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill css-fill" style="width: 60%;"></div>
-                    </div>
-                </div>
-        
-                <!-- ทักษะที่ 3 -->
-                <div class="skill-bar-box">
-                    <div class="skill-info">
-                        <span class="tag tag-js">Hardware Skill</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="skill-desc-text">ซ่อมคอมพิวเตอร์ - การติดตั้งฮาร์ดแวร์</div>
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill js-fill" style="width: 80%;"></div>
+                 <div class="scroll-reveal">
+                     <h3>💻Development💻</h3>
+                     <div class="skill-bar-box">
+                             <span class="tag-skill-head">HTML5</span>
+                             <span class="tag-skill-head">CSS</span>
+                             <span class="tag-skill-head">JavaScript</span>
+                             <span class="tag-skill-head">Android Development</span>
+                             <span class="tag-skill-head">Game Development</span>
+                            
+                     </div>
+                 </div>
+
+                <div class="scroll-reveal">
+                    <h3>🛠️Tools & Platforms🛠️</h3>
+                    <div class="skill-bar-box">
+                            <span class="tag-skill-head">Git</span>
+                            <span class="tag-skill-head">GitHub</span>
+                            <span class="tag-skill-head">Android Studio</span>
+                            <span class="tag-skill-head">Construct 2</span>
+                            <span class="tag-skill-head">Arduino IDE</span>
+                            <span class="tag-skill-head">Visual Studio Code</span>
                     </div>
                 </div>
-        
-                <!-- ทักษะที่ 4 -->
-                <div class="skill-bar-box">
-                    <div class="skill-info">
-                        <span class="tag tag-win">Software Skill</span>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="skill-desc-text">การใช้งานโปรแกรมต่าง ๆ เช่น GitHub, VS Code, Git (Terminal)</div>
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill win-fill" style="width: 60%;"></div>
+
+                <div class="scroll-reveal">
+                    <h3>🖥️System & Hardware🖥️</h3>
+                    <div class="skill-bar-box">
+                            <span class="tag-skill-head">Microsoft Windows</span>
+                            <span class="tag-skill-head">Linux Mint</span>
+                            <span class="tag-skill-head">Linux Terminal</span>
+                            <span class="tag-skill-head">Basic Disk Management</span>
+                            <span class="tag-skill-head">Basic Network Troubleshooting</span>
+                            <span class="tag-skill-head">Laptop Disassembly & Cleaning</span>
+                            <span class="tag-skill-head">Operating System Installation</span>
                     </div>
                 </div>
-        
-            </div>
-        </div>
+
+                <div class="scroll-reveal">
+                    <h3>🔌Emerging Technology🔌</h3>
+                    <div class="skill-bar-box">
+                            <span class="tag-skill-head">IoT</span>
+                            <span class="tag-skill-head">ESP32</span>
+                            <span class="tag-skill-head">AI-Assisted Development</span>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal">
+                    <h3>🧠Soft Skills🧠</h3>
+                    <div class="skill-bar-box">
+                            <span class="tag-skill-head">Problem Solving</span>
+                            <span class="tag-skill-head">Communication</span>
+                            <span class="tag-skill-head">Leadership & Teamwork</span>
+                    </div>
+                </div>
+
     </section>
     </div>
+
+
+
+
+
         
         <!-- ACTIVITIES SECTION -->
          <div class="scroll-reveal">
         <div class="section-row " >
             <h1 class="large-heading " id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
         </div>
+
+        <div class="scroll-reveal">
+    <div class="Time-countdown-container">
+        <h3>การอัพเดทกิจกรรมครั้งถัดไป 15 สิงหาคม 2569</h3>
         
+        <div class="Time-countdown-layout">
+            <h2>DAY</h2>
+            <span id="days">00</span>
+            <h2>HOUR</h2>
+            <span id="hours">00</span>
+            <h2>MINUTE</h2>
+            <span id="minutes">00</span>
+            <h2>SECOND</h2>
+            <span id="seconds">00</span>
+        </div>
+    </div>    
+</div>
+        <div class="scroll-reveal">
         <div class="slider-card">
-            
             <div class="project-card">
-                
                 <section class="card-mini" id="open-popup-c1">
                     <img src="assets/images/m8.jpg" alt="">
                     <div class="card-content">
@@ -208,7 +233,7 @@
                แข่งขันศิลปหัตกรรม สร้างสรรค์เกมจากคอมพิวเตอร์ ครั้งที่ 73 ณ โรงเรียนนครสวรรค์ได้รับรางวัลเหรียญทองคะแนน 89 คะแนน เป็นเกมแนว 2D เน้นการพัฒนาความคิดแบบ Logic โดยใช้เวลาฝึกซ้อมเพียงแค่ 1สัปดาห์
             </p>
         </div>
-
+    </div>
         
 
     </div>
@@ -219,17 +244,24 @@
 
 
 
+
         <!-- PROJECTS SECTION -->
          <div class="scroll-reveal">
         <div class="section-row">
             <h1 class="large-heading" id="projects-goals"> ผลงาน - เป้าหมาย <br>ในปัจจุบัน ขณะนี้</h1>
+           
         </div>
 
+
+
+
+
         <section>
+            <div class="scroll-reveal">
 
             <div class="card-certificates-container">
                 <div class="card-project">
-                    <button class="btn-img-project">อยู่ระหว่างการจัดทำ</button>
+                    <button class="btn-img-project btn-status-green">อยู่ในการพัฒนา</button>
 
                     <a href="https://github.com/fumisaki-g/Portfolio" style="text-decoration: none;">
                                             <img src="assets/images/p-1.png" alt="" class="card-image-certificates">
@@ -250,7 +282,7 @@
                 <div class="card-project">
 
                     <a href="https://1drv.ms/w/c/1cbb5649ce48eaca/IQDTS8OeAxRJSJ6769kw7UQvATUtkv9xCeCX6gATqOWs1pw?e=qExxbJ" style="text-decoration: none;">
-                        <button class="btn-img-project btn-status-blue">กำลังอยู่ช่วงระยะเวลาการทดลอง</button>
+                        <button class="btn-img-project btn-status-orange">กำลังอยู่ช่วงระยะเวลาการทดลอง</button>
                         <img src="assets/images/p-2.png" alt="" class="card-image-certificates">
                         <div class="card-content-certificates">
                             <h2>โครงงาน IS</h2>
@@ -264,11 +296,13 @@
                     </a>
                 </div>
             </div>
+            </div>
+            <div class="scroll-reveal">
             <div class="card-certificates-container">
                 <div class="card-project">
 
                     <a href="https://github.com/fumisaki-g/Portfolio/tree/main/assets/App" style="text-decoration: none;">
-                        <button class="btn-img-project btn-status-orange">อยู่ระหว่างการทดลอง</button>
+                        <button class="btn-img-project btn-status-red">อยู่ในการพัฒนาเวอร์ชั่น</button>
                         <img src="assets/images/p-3.jpg" alt="" class="card-image-certificates">
                         <div class="card-content-certificates">
                             <h2>EARTH NOTE แอปพลิเคชัน</h2>
@@ -284,7 +318,7 @@
                 <div class="card-project">
 
                     <a href="https://www.mytcas.com/" style="text-decoration: none;">
-                    <button class="btn-img-project btn-status-green">เป้าหมายปัจจุบัน</button>
+                    <button class="btn-img-project btn-status-blue">เป้าหมายปัจจุบัน</button>
 
         <img src="assets/images/p-4.png" alt="" class="card-image-certificates">
         <div class="card-content-certificates">
@@ -303,6 +337,7 @@
                         </div>
                     </a>
                 </div>
+            </div>
             </div>
         </section>
         </div>
@@ -1138,6 +1173,7 @@
     <script src="assets/js/animationcursor.js"></script>
     <script src="assets/js/fade.js"></script>
     <script src="assets/js/ai.js"></script>
+    <script src="assets/js/time.js"></script>
 
 <!-- ai chat -->
 
