@@ -11,7 +11,7 @@
     <title>Vutthikorn Website</title>
     
     <link rel="stylesheet" href="assets/css/main.css">
-    <audio id="bgMusic" src="assets/sound/ai-sound.mp3" loop></audio>
+    <!-- <audio id="bgMusic" src="assets/sound/ai-sound.mp3" loop></audio> -->
 </head>
 
 <body>
@@ -68,19 +68,12 @@
             
     </div>
     <div class="scroll-reveal">
-        <div class="about-bio">
-            <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
-                        มีประสบการณ์ในการสร้างเว็บไซต์ พัฒนาเกมจากโปรแกรมคอมพิวเตอร์
-                        รวมถึงการศึกษาระบบปฏิบัติการและเทคโนโลยี IoT เพื่อประยุกต์ใช้ในการแก้ปัญหาในชีวิตจริง
-                        มุ่งมั่นพัฒนาตนเองอย่างต่อเนื่องผ่านการเรียนรู้ การแข่งขัน และการเข้าร่วมกิจกรรมต่าง ๆ
-                        เพื่อเตรียมความพร้อมสู่การศึกษาต่อในระดับมหาวิทยาลัยด้านเทคโนโลยีสารสนเทศ
-                        ผู้มีความสนใจด้านเทคโนโลยีสารสนเทศ วิทยาการคอมพิวเตอร์ และการพัฒนาซอฟต์แวร์</p>
-        </div>
+        <div class="about-bio" id="about-bio-me"></div>
     </div>
 
         
         
-        <div class="about-skills-section">
+        <div class="about-skills-section" >
             <h3>ทักษะความสามารถ (Skills)</h3>
             
                 
@@ -1003,7 +996,7 @@
 
     <!-- popup-certificate-s -->
 
-
+    <div id="certificate-json"></div>
 
     <section class="overlay-popup-certificate" id="background-popup-certificate-s1">
         <div class="popup-box-certificate-s">
@@ -1210,15 +1203,15 @@
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/filter.js"></script>
     <script src="assets/js/popup.js"></script>
-    <script src="assets/js/script.js"></script>
     <script src="assets/js/popupcertificate.js"></script>
     <script src="assets/js/animationcursor.js"></script>
     <script src="assets/js/fade.js"></script>
-    <script src="assets/js/ai.js"></script>
+    <!-- <script src="assets/js/ai.js"></script> -->
     <script src="assets/js/time.js"></script>
+    <script src="assets/js/aboutjson.js"></script>
 
 <!-- ai chat -->
-
+<!-- 
 
 <div class="ai-chat-launcher" id="aiChatLauncher">
     <span>🤖</span>
@@ -1257,7 +1250,7 @@
         <input type="text" id="aiChatInput" placeholder="พิมพ์ถามคำถามภาษาไทยที่นี่..." autocomplete="off">
         <button id="aiSendBtn">ส่ง</button>
     </div>
-</div>
+</div> -->
 </body>
 
 </html>

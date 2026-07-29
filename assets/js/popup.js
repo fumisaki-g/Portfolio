@@ -10,9 +10,9 @@ const openpopupc3 = document.getElementById('open-popup-c3');
 const closepopupc3 = document.getElementById('close-popup-c3');
 const backgroundpopupc3 = document.getElementById('background-popup-c3');
 
-const openpopuphome = document.getElementById('open-popup-home');
-const closepopuphome = document.getElementById('close-popup-home');
-const backgroundpopuphome = document.getElementById('background-popup-home');
+// const openpopuphome = document.getElementById('open-popup-home');
+// const closepopuphome = document.getElementById('close-popup-home');
+// const backgroundpopuphome = document.getElementById('background-popup-home');
 
 function openPopupc1() {
     backgroundpopupc1.style.display = "flex";
@@ -37,13 +37,13 @@ function closePopupc3() {
     backgroundpopupc3.style.display = "none";
 }
 
-function openPopuphome() {
-    backgroundpopuphome.style.display = "block";
-}
+// function openPopuphome() {
+//     backgroundpopuphome.style.display = "block";
+// }
 
-function closePopuphome() {
-    backgroundpopuphome.style.display = "none";
-}
+// function closePopuphome() {
+//     backgroundpopuphome.style.display = "none";
+// }
 
 openpopupc1.addEventListener('click', openPopupc1);
 closepopupc1.addEventListener('click', closePopupc1);
@@ -51,6 +51,6 @@ openpopupc2.addEventListener('click', openPopupc2);
 closepopupc2.addEventListener('click', closePopupc2);
 openpopupc3.addEventListener('click', openPopupc3);
 closepopupc3.addEventListener('click', closePopupc3);
-openpopuphome.addEventListener('click', openPopuphome);
-closepopuphome.addEventListener('click', closePopuphome);
+// openpopuphome.addEventListener('click', openPopuphome);
+// closepopuphome.addEventListener('click', closePopuphome);
 
