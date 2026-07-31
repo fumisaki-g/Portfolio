@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <meta name="viewport" content="width=device-width, initial-scale=0.8"> 
     <meta name="description" content="Portfolio website of Vutthikorn Pannakh, showcasing personal information, skills, activities, projects, and certificates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     
     <title>Vutthikorn Website</title>
@@ -27,25 +29,43 @@
                 <span></span>
             </button>
             <ul class="header-btn-con">
-                <li class="header-btn"><a href="#open-popup-home">เกี่ยวกับฉัน</a></li>
+                <li class="header-btn"><a href="#About">เกี่ยวกับฉัน</a></li>
                 <li class="header-btn"><a href="#latest-activities">กิจกรรมล่าสุด</a></li>
-                <li class="header-btn"><a href="#projects-goals">ผลงาน</a></li>
+                <li class="header-btn"><a href="#certificates">เกียรติบัตร</a></li>
                 <li class="header-btn"><a href="#contact-info">ช่องทางติดต่อ</a></li>
             </ul>
         </nav>
-        <nav class="header-nav2-con nav-2-hidden" id="nav-tab2">
-            <ul class="header-btn2-con">
-                <!-- <li class="header-btn2"><a href="#projects-goals">เป้าหมาย</a></li> -->
-                <li class="header-btn2"><a href="https://github.com/fumisaki-g">Github</a></li>
-                <li class="header-btn2"><a href="#certificates-details">เกียรติบัตรทั้งหมด</a></li>
-                <li class="header-btn2 "><a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk" download="EARTH-NOTE version 0.1 Thai .apk">Earth NOTE (แอพพลิเคชั่น)</a></li>
-                <!-- <li class="header-btn2"><a href="https://www.mytcas.com/">คะแนน TGAT</a></li> -->
-            </ul>
-        </nav>
+        
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
+        <div class="scroll-reveal">
+
+
+            <section class="Home-container">
+            <div class="left-home">
+                <div class="text-home">
+                <h1>Welcome Vuthikorn</h1>
+                <h2>Student Developer</h2>
+                <p>การเรียรรู้มันไม่มีที่สิ้นสุด สิ่งที่จะสิ้นสุดก่อนคือ เวลาที่ เสียไปในทุกๆวัน <br> แต่ เรียนยังไงให้เข้าใจ และสามารถเอามาใช้จริงได้ นั่นล่ะ คือสิ่งที่สำคัญ และปัจจับหลักนั้นขึ้นอยู่ที่ตัวเอง</p>
+                </div>
+                
+                <div class="btn-home">
+                <li class="btn-home-1"><a href="#projects-goals">ผลงานของผม</a></li>
+                <li class="header-btn"><a href="#skill-tag">ทักษะของผม</a></li>
+                </div>
+            </div>
+            <div class="right-home">
+                <img src="assets/images/m9.jpg" alt="Profile">
+            </div>
+
+            </section>
+        </div>
+
+
+
+
         <div class="scroll-reveal">
         <!-- HERO SECTION -->
         
@@ -54,7 +74,7 @@
     <div class="scroll-reveal">
 
         <div class="about-text-col">
-            <div class="about-header">
+            <div class="about-header" id="About">
                 <h1 class="large-heading">นายวุฒิกร ปั้นนาค</h1>
                 <p class="about-subtitle">แนะนำตัวและทักษะความสามารถ</p>
             </div>
@@ -79,7 +99,7 @@
                 <!-- ทักษะที่ 1 -->
                  <div class="scroll-reveal">
                      <h3>💻Development💻</h3>
-                     <div class="skill-bar-box">
+                     <div class="skill-bar-box" id="skill-tag">
                              <span class="tag-skill-head">HTML5</span>
                              <span class="tag-skill-head">CSS</span>
                              <span class="tag-skill-head">JavaScript</span>
@@ -290,7 +310,7 @@
             <div class="card-certificates-container">
                 <div class="card-project">
                     <button class="btn-img-project btn-status-green">อยู่ในการพัฒนา</button>
-
+                    
                     <a href="https://github.com/fumisaki-g/Portfolio" style="text-decoration: none;">
                                             <img src="assets/images/p-1.png" alt="" class="card-image-certificates">
                                             <div class="card-content-certificates">
@@ -350,10 +370,10 @@
                         </div>
                     </a>
                 </div>
-                <div class="card-project">
+    <div class="card-project">
 
-                    <a href="https://www.mytcas.com/" style="text-decoration: none;">
-                    <button class="btn-img-project btn-status-blue">เป้าหมายการศึกษา</button>
+        <a href="https://www.mytcas.com/" style="text-decoration: none;">
+        <button class="btn-img-project btn-status-blue">เป้าหมายการศึกษา</button>
 
         <img src="assets/images/p-7.png" alt="" class="card-image-certificates">
         <div class="card-content-certificates">

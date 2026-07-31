@@ -32,7 +32,7 @@
 .header-btn {
     list-style: none;
     background-color: #ffffff;
-    border: 1px solid #dbeafe;
+    border: 5px solid #dbeafe;
     border-radius: 999px;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
