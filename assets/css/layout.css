@@ -17,6 +17,14 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+a {
+    text-decoration: none;
+}
+
+span {
+    color: #1e40af;
+}
+
 h1,
 h2,
 p {

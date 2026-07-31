@@ -35,7 +35,7 @@ function updateCountdown() {
         document.getElementById("minutes").textContent = "00";
         document.getElementById("seconds").textContent = "00";
 
-        console.log("Countdown finished!");
+        console.log("ยังไม่พบกิจกรรมที่อยู่ในรายการคิวการทำงานของตาราง จึงยุติเวลาถอยหลัง");
     }
 }
 

@@ -27,18 +27,19 @@
                 <span></span>
             </button>
             <ul class="header-btn-con">
-                <li class="header-btn"><a href="#open-popup-home">หน้าหลัก</a></li>
-                <li class="header-btn"><a href="#certificates">หน้าเกียรติบัตร</a></li>
-                <li class="header-btn "><a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk" download="EARTH-NOTE version 0.1 Thai .apk">Earth NOTE (แอพพลิเคชั่น)</a></li>
-                <li class="header-btn"><a href="https://github.com/fumisaki-g">Github</a></li>
+                <li class="header-btn"><a href="#open-popup-home">เกี่ยวกับฉัน</a></li>
+                <li class="header-btn"><a href="#latest-activities">กิจกรรมล่าสุด</a></li>
+                <li class="header-btn"><a href="#projects-goals">ผลงาน</a></li>
+                <li class="header-btn"><a href="#contact-info">ช่องทางติดต่อ</a></li>
             </ul>
         </nav>
         <nav class="header-nav2-con nav-2-hidden" id="nav-tab2">
             <ul class="header-btn2-con">
-                <li class="header-btn2"><a href="#latest-activities">กิจกรรมล่าสุด</a></li>
-                <li class="header-btn2"><a href="#projects-goals">เป้าหมาย</a></li>
+                <!-- <li class="header-btn2"><a href="#projects-goals">เป้าหมาย</a></li> -->
+                <li class="header-btn2"><a href="https://github.com/fumisaki-g">Github</a></li>
                 <li class="header-btn2"><a href="#certificates-details">เกียรติบัตรทั้งหมด</a></li>
-                <li class="header-btn2"><a href="https://www.mytcas.com/">คะแนน TGAT</a></li>
+                <li class="header-btn2 "><a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk" download="EARTH-NOTE version 0.1 Thai .apk">Earth NOTE (แอพพลิเคชั่น)</a></li>
+                <!-- <li class="header-btn2"><a href="https://www.mytcas.com/">คะแนน TGAT</a></li> -->
             </ul>
         </nav>
     </header>
@@ -47,9 +48,7 @@
     <main>
         <div class="scroll-reveal">
         <!-- HERO SECTION -->
-        <div class="section-title-row" id="open-popup-home">
-            <h1 class="large-heading"> ยินดีต้อนรับ </h1>
-        </div>
+        
         </div>
        <section class="about-flex-container">
     <div class="scroll-reveal">
@@ -57,7 +56,7 @@
         <div class="about-text-col">
             <div class="about-header">
                 <h1 class="large-heading">นายวุฒิกร ปั้นนาค</h1>
-                <p class="about-subtitle">ประวัติส่วนตัวและทักษะความสามารถ</p>
+                <p class="about-subtitle">แนะนำตัวและทักษะความสามารถ</p>
             </div>
             <div class="about-image-col">
                 <div class="profile-image-wrapper">
@@ -128,6 +127,7 @@
                     <h3>🧠Soft Skills🧠</h3>
                     <div class="skill-bar-box">
                             <span class="tag-skill-head">Problem Solving</span>
+                            <span class="tag-skill-head">Algorithm</span>
                             <span class="tag-skill-head">Communication</span>
                             <span class="tag-skill-head">Leadership & Teamwork</span>
                     </div>
@@ -147,22 +147,25 @@
             <h1 class="large-heading " id="latest-activities"> กิจกรรมที่เข้าร่วมล่าสุด </h1>
         </div>
 
+            
             <div class="scroll-reveal">
-                <div class="Time-countdown-container">
-                    <h2>การอัพเดทกิจกรรมครั้งถัดไป 5 สิงหาคม 2569</h2>
+                
+
+                    <div class="Time-countdown-container" id="open-popup-timeline">
+                        <h2>การอัพเดทกิจกรรมครั้งถัดไป 5 สิงหาคม 2569</h2>
                         <h3>การแข่งขัน รูบิค ณ บึงบอระเพ็ด</h3>
-                    
-                    <div class="Time-countdown-layout">
-                        <h2>DAY</h2>
-                        <span id="days">00</span>
-                        <h2>HOUR</h2>
-                        <span id="hours">00</span>
-                        <h2>MINUTE</h2>
-                        <span id="minutes">00</span>
-                        <h2>SECOND</h2>
-                        <span id="seconds">00</span>
-                    </div>
-                </div>    
+                        
+                        <div class="Time-countdown-layout">
+                            <h2>DAY</h2>
+                            <span id="days">00</span>
+                            <h2>HOUR</h2>
+                            <span id="hours">00</span>
+                            <h2>MINUTE</h2>
+                            <span id="minutes">00</span>
+                            <h2>SECOND</h2>
+                            <span id="seconds">00</span>
+                        </div>
+                    </div>    
             </div>
             
         <div class="scroll-reveal">
@@ -214,7 +217,9 @@
 
 
 <section class="about-skills-section scroll-reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
-    <h3>กิจกรรมที่เคยเข้าร่วม (Activities)</h3>
+
+    <details>
+        <summary><h3>กิจกรรมที่เคยเข้าร่วม (Activities)</h3></summary>
     <div class="skills-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
         
         <!-- กิจกรรมที่ 1 -->
@@ -261,7 +266,7 @@
 
     </div>
 </section>
-
+</details>
 
 
 
@@ -271,7 +276,7 @@
         <!-- PROJECTS SECTION -->
          <div class="scroll-reveal">
         <div class="section-row">
-            <h1 class="large-heading" id="projects-goals"> ผลงาน - เป้าหมาย <br>ในปัจจุบัน ขณะนี้</h1>
+            <h1 class="large-heading" id="projects-goals"> ผลงาน -  เป้าหมาย</h1>
            
         </div>
 
@@ -279,8 +284,8 @@
 
 
 
+        <div class="scroll-reveal">
         <section>
-            <div class="scroll-reveal">
 
             <div class="card-certificates-container">
                 <div class="card-project">
@@ -366,8 +371,16 @@
                 </div>
             </div>
             </div>
+
+            
+
+
+
         </section>
         </div>
+
+
+
 
         <!-- CERTIFICATES SECTION -->
 
@@ -753,8 +766,8 @@
             <section class="footer-about">
                 
                 <h3>ชี้แจงเกี่ยวกับเว็ปไซต์</h3>
-                <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="#" class="footer-meta-link">Portfolio</a> และ <br><a
-                    href="#" class="footer-meta-link">การทำโครงงานIS</a>
+                <p>เว็ปไซต์นี้จัดทำขึ้นเพื่อสะสมผลงาน <a href="https://canva.link/0jg56nav6rj2gn6" class="footer-meta-link">Portfolio</a> และ <a
+                    href="https://1drv.ms/w/c/1cbb5649ce48eaca/IQDTS8OeAxRJSJ6769kw7UQvATUtkv9xCeCX6gATqOWs1pw?e=qExxbJ" class="footer-meta-link">การทำโครงงานIS</a>
                     ระดับม.6โดยเฉพาะ
                     เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมผลงาน กิจกรรม เกียรติบัตร และประสบการณ์การเรียนรู้
                     โดยผู้จัดทำเป็นผู้พัฒนาเว็บไซต์ด้วยตนเอง
@@ -767,12 +780,22 @@
 
             </section>
             <section class="footer-website">
-
+                
                 <h3>ปุ่มช่วยเหลือพิเศษ</h3>
-
-                <a href="#open-popup-home">หน้าแรก</a><br>
-                <a href="#certificates" class="footer-link">คลังผลงาน</a><br>
+                
+                <a href="#open-popup-home">เกี่ยวกับฉัน</a><br>
+                <a href="#projects-goals">ผลงาน</a><br>
+                <a href="#certificates" class="footer-link">เกียรติบัตร</a><br>
                 <!-- <a href="#" class="footer-alert-link">ประวัติส่วนตัว (เฉพาะกรรมการที่ดู Portfolio)</a> -->
+                
+            </section>
+            <section class="footer-website">
+
+                <h3>Appication EARTH NOTE </h3>
+
+                <a href="./assets/App/EARTH-NOTE Version-BETA.apk"  class="footer-alert-link">Earth NOTE version Beta (Android)</a><br>
+                <a href="./assets/App/EARTH-NOTE version 0.1 Thai .apk"  class="footer-alert-link">Earth NOTE version Thai (Android)</a>
+                
 
             </section>
             <section class="footer-contact">
@@ -1179,6 +1202,15 @@
             <img src="assets/images/c15-2565.jpg" alt="" class="popup-image-certificate-s">
             <button class="close-popup" id="close-popup-certificate-s26">close</button>
         </div>
+    </section>
+
+
+
+    <section class="overlay-popup-timeline" id="background-popup-timeline">
+        <div class="popup-timeline">
+            <img src="assets/images/timeline.png" alt="">
+            <button class="close-popup" id="close-popup-timeline">close</button>
+    </div>
     </section>
    
 
