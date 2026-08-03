@@ -14,6 +14,10 @@ const openpopuptimeline = document.getElementById('open-popup-timeline')
 const closepopuptimeline = document.getElementById('close-popup-timeline')
 const backgroundtimeline = document.getElementById('background-popup-timeline')
 
+const openpopupSOP = document.getElementById('SOP')
+const closepopupSOP = document.getElementById('close-popup-SOP')
+const backgroundSOP = document.getElementById('background-popup-SOP')
+
 
 // const openpopuphome = document.getElementById('open-popup-home');
 // const closepopuphome = document.getElementById('close-popup-home');
@@ -50,6 +54,14 @@ function closePopuptimeline() {
     backgroundtimeline.style.display = "none";
 }
 
+function openPopupSOP() {
+    backgroundSOP.style.display = "flex";
+}
+
+function closePopupSOP() {
+    backgroundSOP.style.display = "none";
+}
+
 // function openPopuphome() {
 //     backgroundpopuphome.style.display = "block";
 // }
@@ -66,6 +78,9 @@ openpopupc3.addEventListener('click', openPopupc3);
 closepopupc3.addEventListener('click', closePopupc3);
 openpopuptimeline.addEventListener('click', openPopuptimeline);
 closepopuptimeline.addEventListener('click', closePopuptimeline);
+
+openpopupSOP.addEventListener('click', openPopupSOP);
+closepopupSOP.addEventListener('click', closePopupSOP);
 // openpopuphome.addEventListener('click', openPopuphome);
 // closepopuphome.addEventListener('click', closePopuphome);
 
