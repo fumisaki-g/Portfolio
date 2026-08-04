@@ -11,12 +11,29 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.card-mini-warn {
+    cursor: pointer;
+    width: 380px;
+    margin: 2rem 0;
+    background-color: #f0c2c2;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .card-mini:hover {
     transform: translateY(-6px);
     box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
 }
 
 .card-mini img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.card-mini-warn img {
     width: 100%;
     height: 300px;
     object-fit: cover;
