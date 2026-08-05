@@ -468,3 +468,16 @@ closepopups26.addEventListener('click', closePopups26);
 
 
 
+const openpopups27 = document.getElementById('open-popup-certificate-s27');
+const closepopups27 = document.getElementById('close-popup-certificate-s27');
+const backgroundpopups27 = document.getElementById('background-popup-certificate-s27');
+function openPopups27() {
+    backgroundpopups27.style.display = "flex";
+}
+
+function closePopups27() {
+    backgroundpopups27.style.display = "none";
+}
+
+openpopups27.addEventListener('click', openPopups27);
+closepopups27.addEventListener('click', closePopups27);
