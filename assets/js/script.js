@@ -842,7 +842,7 @@ window.addEventListener('load', function() {
 
 // time
 // กำหนดวันและเวลาที่ต้องการให้นับถอยหลังไปถึง
-const targetDate = new Date("2026-08-15T00:00:00").getTime();
+const targetDate = new Date("2026-08-17T12:00:00").getTime();
 
 
 function updateCountdown() {
@@ -878,7 +878,7 @@ function updateCountdown() {
         document.getElementById("minutes").textContent = "00";
         document.getElementById("seconds").textContent = "00";
 
-        console.log("ยังไม่พบกิจกรรมที่อยู่ในรายการคิวการทำงานของตาราง จึงยุติเวลาถอยหลัง");
+        console.log("กิจกรรมอยู่ระหว่างดำเนินการหรือสิ้นสุดแล้ว ผมจะมาอัพเดทข้อมูลให้ใหม่ในเร็วๆนี้ครับ");
     }
 }
 
