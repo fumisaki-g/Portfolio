@@ -12,9 +12,7 @@ const openpopupc3 = document.getElementById('open-popup-c3');
 const closepopupc3 = document.getElementById('close-popup-c3');
 const backgroundpopupc3 = document.getElementById('background-popup-c3');
 
-const openpopuptimeline = document.getElementById('open-popup-timeline')
-const closepopuptimeline = document.getElementById('close-popup-timeline')
-const backgroundtimeline = document.getElementById('background-popup-timeline')
+
 
 const openpopupSOP = document.getElementById('SOP')
 const closepopupSOP = document.getElementById('close-popup-SOP')
@@ -48,13 +46,6 @@ function closePopupc3() {
     backgroundpopupc3.style.display = "none";
 }
 
-function openPopuptimeline() {
-    backgroundtimeline.style.display = "flex";
-}
-
-function closePopuptimeline() {
-    backgroundtimeline.style.display = "none";
-}
 
 function openPopupSOP() {
     backgroundSOP.style.display = "flex";
@@ -78,8 +69,6 @@ openpopupc2.addEventListener('click', openPopupc2);
 closepopupc2.addEventListener('click', closePopupc2);
 openpopupc3.addEventListener('click', openPopupc3);
 closepopupc3.addEventListener('click', closePopupc3);
-openpopuptimeline.addEventListener('click', openPopuptimeline);
-closepopuptimeline.addEventListener('click', closePopuptimeline);
 
 openpopupSOP.addEventListener('click', openPopupSOP);
 closepopupSOP.addEventListener('click', closePopupSOP);
