@@ -1,3 +1,104 @@
+// popup
+
+const openpopupc1 = document.getElementById('open-popup-c1');
+const closepopupc1 = document.getElementById('close-popup-c1');
+const backgroundpopupc1 = document.getElementById('background-popup-c1');
+
+const openpopupc2 = document.getElementById('open-popup-c2');
+const closepopupc2 = document.getElementById('close-popup-c2');
+const backgroundpopupc2 = document.getElementById('background-popup-c2');
+
+const openpopupc3 = document.getElementById('open-popup-c3');
+const closepopupc3 = document.getElementById('close-popup-c3');
+const backgroundpopupc3 = document.getElementById('background-popup-c3');
+
+const openpopuptimeline = document.getElementById('open-popup-timeline')
+const closepopuptimeline = document.getElementById('close-popup-timeline')
+const backgroundtimeline = document.getElementById('background-popup-timeline')
+
+const openpopupSOP = document.getElementById('SOP')
+const closepopupSOP = document.getElementById('close-popup-SOP')
+const backgroundSOP = document.getElementById('background-popup-SOP')
+
+
+// const openpopuphome = document.getElementById('open-popup-home');
+// const closepopuphome = document.getElementById('close-popup-home');
+// const backgroundpopuphome = document.getElementById('background-popup-home');
+
+function openPopupc1() {
+    backgroundpopupc1.style.display = "flex";
+}
+function closePopupc1() {
+    backgroundpopupc1.style.display = "none";
+}
+
+
+function openPopupc2() {
+    backgroundpopupc2.style.display = "flex";
+}
+function closePopupc2() {
+    backgroundpopupc2.style.display = "none";
+}
+
+
+function openPopupc3() {
+    backgroundpopupc3.style.display = "flex";
+}
+function closePopupc3() {
+    backgroundpopupc3.style.display = "none";
+}
+
+function openPopuptimeline() {
+    backgroundtimeline.style.display = "flex";
+}
+
+function closePopuptimeline() {
+    backgroundtimeline.style.display = "none";
+}
+
+function openPopupSOP() {
+    backgroundSOP.style.display = "flex";
+}
+
+function closePopupSOP() {
+    backgroundSOP.style.display = "none";
+}
+
+// function openPopuphome() {
+//     backgroundpopuphome.style.display = "block";
+// }
+
+// function closePopuphome() {
+//     backgroundpopuphome.style.display = "none";
+// }
+
+openpopupc1.addEventListener('click', openPopupc1);
+closepopupc1.addEventListener('click', closePopupc1);
+openpopupc2.addEventListener('click', openPopupc2);
+closepopupc2.addEventListener('click', closePopupc2);
+openpopupc3.addEventListener('click', openPopupc3);
+closepopupc3.addEventListener('click', closePopupc3);
+openpopuptimeline.addEventListener('click', openPopuptimeline);
+closepopuptimeline.addEventListener('click', closePopuptimeline);
+
+openpopupSOP.addEventListener('click', openPopupSOP);
+closepopupSOP.addEventListener('click', closePopupSOP);
+// openpopuphome.addEventListener('click', openPopuphome);
+// closepopuphome.addEventListener('click', closePopuphome);
+
+
+
+
+
+
+
+
+
+
+
+
+// popup certificate
+
 const openpopup1 = document.getElementById('open-popup-certificate-1');
 const closepopup1 = document.getElementById('close-popup-certificate-1');
 const backgroundpopup = document.getElementById('background-popup-certificate-1');
@@ -481,3 +582,306 @@ function closePopups27() {
 
 openpopups27.addEventListener('click', openPopups27);
 closepopups27.addEventListener('click', closePopups27);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// navbar
+
+const tab1 = document.getElementById('nav-tab1');
+const tab2 = document.getElementById('nav-tab2');
+const headerContainer = document.querySelector('.header-container');
+const menuToggle = document.querySelector('.header-menu-toggle');
+
+let isOverTab1 = false;
+let isOverTab2 = false;
+let desktopInteractionsBound = false;
+
+function checkandHide() {
+    setTimeout(() => {
+        if (!isOverTab1 && !isOverTab2) {
+            tab2.classList.add('nav-2-hidden');
+        }
+    }, 400);
+}
+
+function handleTab1Enter() {
+    isOverTab1 = true;
+    tab2.classList.remove('nav-2-hidden');
+}
+
+function handleTab1Leave() {
+    isOverTab1 = false;
+    checkandHide();
+}
+
+function handleTab2Enter() {
+    isOverTab2 = true;
+}
+
+function handleTab2Leave() {
+    isOverTab2 = false;
+    checkandHide();
+}
+
+function bindDesktopInteractions() {
+    if (desktopInteractionsBound || !tab1 || !tab2) {
+        return;
+    }
+
+   
+    tab1.addEventListener('mouseenter', handleTab1Enter);
+    tab1.addEventListener('mouseleave', handleTab1Leave);
+    tab2.addEventListener('mouseenter', handleTab2Enter);
+    tab2.addEventListener('mouseleave', handleTab2Leave);
+    desktopInteractionsBound = true;
+}
+
+function unbindDesktopInteractions() {
+    if (!desktopInteractionsBound || !tab1 || !tab2) {
+        return;
+    }
+
+    tab1.removeEventListener('mouseenter', handleTab1Enter);
+    tab1.removeEventListener('mouseleave', handleTab1Leave);
+    tab2.removeEventListener('mouseenter', handleTab2Enter);
+    tab2.removeEventListener('mouseleave', handleTab2Leave);
+    desktopInteractionsBound = false;
+}
+
+function closeMobileMenu() {
+    if (!headerContainer || !menuToggle) {
+        return;
+    }
+
+    headerContainer.classList.remove('header-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+function toggleMobileMenu() {
+    if (!headerContainer || !menuToggle || !window.matchMedia('(max-width: 768px)').matches) {
+        return;
+    }
+
+   
+    const isOpen = headerContainer.classList.toggle('header-menu-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+}
+
+function syncHeaderMode() {
+    if (!tab1 || !tab2) {
+        return;
+    }
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        unbindDesktopInteractions();
+        tab2.classList.remove('nav-2-hidden');
+        closeMobileMenu();
+    } else {
+        bindDesktopInteractions();
+        tab2.classList.remove('nav-2-hidden');
+        closeMobileMenu();
+    }
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMobileMenu);
+}
+
+document.querySelectorAll('.header-btn a, .header-btn2 a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            closeMobileMenu();
+        }
+    });
+});
+
+window.addEventListener('resize', syncHeaderMode);
+syncHeaderMode();
+
+
+
+
+
+
+
+
+
+
+
+
+// filter
+function filtercards(category) {
+    const cards = document.querySelectorAll('.card-certificates');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fade
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.15 
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active"); 
+            } else {
+                entry.target.classList.remove("active"); 
+            }
+        });
+    }, observerOptions);
+
+    revealElements.forEach((element) => {
+        scrollObserver.observe(element);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// animation Loading
+function setLoadingOverlay(visible) {
+    const overlay = document.getElementById('loadingOverlay');
+    if (overlay) {
+        overlay.style.display = visible ? 'flex' : 'none';
+    }
+}
+
+function shouldShowPageLoading(link) {
+    const href = link.getAttribute('href') || '';
+
+    if (!href || href === '#' || href.startsWith('#')) return false;
+    if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return false;
+    if (link.hasAttribute('download')) return false;
+    if (/\.(zip|apk|pdf|exe|doc|docx|ppt|pptx|xls|xlsx)$/i.test(href)) return false;
+    if (link.getAttribute('target') === '_blank') return false;
+
+    try {
+        const resolvedUrl = new URL(href, window.location.href);
+        const isExternalLink = resolvedUrl.origin !== window.location.origin;
+        if (isExternalLink) return false;
+
+        const isSamePage = resolvedUrl.pathname === window.location.pathname && resolvedUrl.search === window.location.search;
+        return !isSamePage;
+    } catch (error) {
+        return false;
+    }
+}
+
+document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function() {
+        if (shouldShowPageLoading(this)) {
+            setLoadingOverlay(true);
+        } else {
+            setLoadingOverlay(false);
+        }
+    });
+});
+
+
+window.addEventListener('pageshow', function(event) {
+  
+    if (event.persisted) {
+        setLoadingOverlay(false);
+    }
+});
+
+
+window.addEventListener('load', function() {
+    setLoadingOverlay(false);
+});
+
+
+
+
+
+
+
+
+
+// time
+// กำหนดวันและเวลาที่ต้องการให้นับถอยหลังไปถึง
+const targetDate = new Date("2026-08-15T00:00:00").getTime();
+
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) 
+        / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) 
+        / (1000 * 60)
+    );
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) 
+        / 1000
+    );
+
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+
+    if (distance < 0) {
+
+        clearInterval(countdown);
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        console.log("ยังไม่พบกิจกรรมที่อยู่ในรายการคิวการทำงานของตาราง จึงยุติเวลาถอยหลัง");
+    }
+}
+
+const countdown = setInterval(updateCountdown, 1000);
+
+updateCountdown();

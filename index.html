@@ -183,9 +183,7 @@
                 
 
                     <div class="Time-countdown-container" id="open-popup-timeline">
-                        <h2>การอัพเดทกิจกรรมครั้งถัดไป 15 สิงหาคม 2569</h2>
-                        <h3>มหาวิทยาลัยทั้งหมดเปิดเกณฑ์การเข้าสมัคร</h3>
-                        
+                        <div id="texttimeline"></div>
                         <div class="Time-countdown-layout">
                             <h2>DAY</h2>
                             <span id="days">00</span>
@@ -196,12 +194,13 @@
                             <h2>SECOND</h2>
                             <span id="seconds">00</span>
                         </div>
+                        
                     </div>    
             </div>
             
         <div class="scroll-reveal">
         <div class="slider-card">
-            <div class="project-card">
+            <div class="project-card" id="project-card-container">
 
                 <!-- กิจกรรมที่ 1 -->
 
@@ -254,66 +253,30 @@
 
     <details>
         <summary><h3>กิจกรรมที่เคยเข้าร่วม (Activities)</h3></summary>
-    <div class="skills-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
+    <div class="skills-grid" style="grid-template-columns: 1fr; gap: 1.25rem;" id="activities-details">
+
         
-        <!-- กิจกรรมที่ 1 -->
+            <!-- แจ้งเตือน  หากอัพเดทตลอดเวลา ทุกครั้งที่มีการแก้ไขใหม่ให้ทำการไปเพิ่มเติมในส่วนของ Fetch.js และ activities.json เพื่อให้ข้อมูลแสดงผลได้อย่างถูกต้อง  -->
+
+
         <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
             <div class="skill-info">
-                <span class="tag tag-html" style="background-color: #ecfdf5; color: #059669;">การเข้าร่วม</span>
+                <span class="tag tag-css" style="background-color: #ecfdf5; color: #059669;">การเข้าร่วม</span>
                 <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2569</span>
             </div>
             <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">•OPEN HOUSE KU KPS</h4>
             <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-                ได้ไปเข้าร่วมกิจกรรม OPEN HOUSE KU KPS ที่มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน 
-                ได้เปิดโลกกว้างเกี่ยวกับการเรียนด้านวิทยาศาสตร์และเทคโนโลยีสารสนเทศ 
-                โดยการเดินทางมีการวางแผนและเดินทางไปเองจากนครสวรรค์ทั้งหมด 
-                ไปคนเดียวได้รู้ถึงการวางแผนและค่าใช้จ่ายอย่างรอบคอบ
-            </p>
-        </div>
-        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <div class="skill-info">
-                <span class="tag tag-html" style="background-color: #ecfdf5; color: #0229c7;">การแข่งขัน</span>
-                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2569</span>
-            </div>
-            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">•โต้วาที กิจกรรมวันภาษาไทย</h4>
-            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-                ได้เข้าร่วมการแข่งขันโต้วาที จากกิจกรรมวันภาษาไทยของโรงเรียน 
-                โดยเป็นตัวแทนของห้องในการแข่งขันโต้วาทีในหัวข้อที่กำหนด ได้ฝึกทักษะการพูด การวิเคราะห์ 
-                และการตอบโต้ความคิดเห็นของฝ่ายตรงข้ามอย่างมีเหตุผล พร้อมทั้งได้รับรางวัลชนะเลิศอันดับที่ 1 
-                ของการแข่งขันโต้วาทีในครั้งนี้
-            </p>
-        </div>
-        
-        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <div class="skill-info">
-                <span class="tag tag-html" style="background-color: #ecfdf5; color: #059669;">อบรม</span>
-                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2569</span>
-            </div>
-            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">•อบรมการสร้างนวัฒกรรมด้วยเทคโนโลยี IoT</h4>
-            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-                เข้าร่วมอบรมเชิงปฏิบัติการการสร้างนวัตกรรมด้วยเทคโนโลยี IoT จัดโดยมหาวิทยาลัยราชภัฏนครสวรรค์
-                เพื่อศึกษาการเชื่อมต่ออุปกรณ์กับเครือข่ายอินเทอร์เน็ตและการควบคุมระยะไกล
-                โดยผู้เข้าร่วมอบรมได้ทดลองออกแบบวงจรและเขียนโปรแกรมควบคุมอุปกรณ์ด้วยตนเอง
-            </p>
-        </div>
-
-        <!-- กิจกรรมที่ 2 -->
-        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <div class="skill-info">
-                <span class="tag tag-css" style="background-color: #fff7ed; color: #ea580c;">การแข่งขัน</span>
-                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">พ.ศ. 2568</span>
-            </div>
-            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">• แข่งขันสร้างเกมจากโปรแกรมคอมพิวเตอร์</h4>
-            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-               แข่งขันศิลปหัตกรรม สร้างสรรค์เกมจากคอมพิวเตอร์ ครั้งที่ 73 ณ โรงเรียนนครสวรรค์ได้รับรางวัลเหรียญทองคะแนน 89 คะแนน เป็นเกมแนว 2D เน้นการพัฒนาความคิดแบบ Logic โดยใช้เวลาฝึกซ้อมเพียงแค่ 1สัปดาห์
+               ได้ไปเข้าร่วมกิจกรรม OPEN HOUSE KU KPS ที่มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน  ได้เปิดโลกกว้างเกี่ยวกับการเรียนด้านวิทยาศาสตร์และเทคโนโลยีสารสนเทศ  โดยการเดินทางมีการวางแผนและเดินทางไปเองจากนครสวรรค์ทั้งหมด ไปคนเดียวได้รู้ถึงการวางแผนและค่าใช้จ่ายอย่างรอบคอบ
             </p>
         </div>
     </div>
+
+
         
 
     </div>
-</section>
 </details>
+</section>
 
 
 
@@ -1259,122 +1222,11 @@
     
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/filter.js"></script>
-    <script src="assets/js/popup.js"></script>
-    <script src="assets/js/popupcertificate.js"></script>
-    <script src="assets/js/animationcursor.js"></script>
-    <script src="assets/js/fade.js"></script>
-    <script src="assets/js/time.js"></script>
-    <script src="assets/js/aboutjson.js"></script>
+    <script src="assets/js/fetch.js"></script>
     <script src="assets/js/supabase.js"></script>
+    <script src="assets/js/script.js"></script>
     
-    
-    <!-- แหล่งรวมตัว Comment Code -->
-
-
-
-    <!-- POPUPS SECTION END -->
-    
-    <!-- animatiion -->
-    <!-- <div id="loadingOverlay">
-        <div class="loading-card">
-        <div class="loading-dots" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <p class="loading-title">กำลังเปลี่ยนหน้า...</p>
-    </div>
-    </div> -->
-
-
-    
-    <!-- ai chat -->
-    <!-- 
-        
-    <div class="ai-chat-launcher" id="aiChatLauncher">
-    <span>🤖</span>
-</div>
-
-
-<div class="ai-chat-window" id="aiChatWindow">
-    <div class="ai-chat-header">
-        <div class="ai-status-container">
-            <div class="ai-avatar">🤖</div>
-            <div>
-                <h4>ผู้ช่วย AI ประจำพอร์ต</h4>
-                <p class="ai-status-text">ออฟไลน์ • พร้อมตอบภาษาไทย</p>
-            </div>
-        </div>
-        <button id="aiMuteBtn" class="ai-sound-btn" title="ปิดเพลง">🔊</button>
-        <button class="ai-close-btn" id="aiCloseBtn">&times;</button>
-    </div>
-    
-    <div class="ai-chat-body" id="aiChatBody">
-        <div class="message ai-message">
-            สวัสดีครับ! ผมคือบอทผู้ช่วยส่วนตัว ยินดีต้อนรับเข้าสู่พอร์ตโฟลิโอครับ ยินดีตอบคำถามเกี่ยวกับประวัติ ทักษะ หรือช่องทางการติดต่อครับ
-        </div>
-        
-        <div class="ai-quick-tags" id="aiQuickTags">
-            <p style="font-size: 0.8rem; color: #64748b; margin: 0 0 0.5rem 0; font-weight: 600;">💡 คำถามแนะนำที่คลิกถามได้เลย:</p>
-    <button class="quick-tag-btn">แนะนำตัวให้ฟังหน่อย</button>
-    <button class="quick-tag-btn">ปิดเพลงยังไง</button>
-    <button class="quick-tag-btn">ขอดูด้าน Hardware / Software หน่อย</button>
-    <button class="quick-tag-btn">เป้าหมายในอนาคตคืออะไร?</button>
-    <button class="quick-tag-btn">ขอช่องทางการติดต่อหน่อยครับ</button>
-</div>
-    </div>
-    
-    <div class="ai-chat-footer">
-        <input type="text" id="aiChatInput" placeholder="พิมพ์ถามคำถามภาษาไทยที่นี่..." autocomplete="off">
-        <button id="aiSendBtn">ส่ง</button>
-    </div>
-</div> -->
-
-
-
-
-<!-- popup-home -->
-
-<!-- <div class="overlay-popup-home" id="background-popup-home">
-    <div class="popup-box-home">
-        <div class="popup-head">
-            <h1>นายวุฒิกร ปั้นนาค</h1>
-        </div>
-        <div class="popup-main">
-            <h2>ทักษะ-ความสามารถ</h2>
-            <li>พัฒนาเว็บไซต์ด้วย HTML, CSS และ JavaScript</li>
-            <li>สร้างเกม 2 มิติด้วยโปรแกรม Construct</li>
-            <li>ใช้งาน Git และ GitHub สำหรับจัดการโปรเจกต์</li>
-            <li>ศึกษาระบบปฏิบัติการ Linux และ Windows</li>
-            <li>มีประสบการณ์ด้าน IoT และไมโครคอนโทรลเลอร์ ESP32</li>
-            <li>ทำงานร่วมกับผู้อื่นและบริหารทีมในกิจกรรมสภานักเรียน</li>
-        </ul>
-        
-        <h2 class="mt-2rem">ระดับความสามารถ</h2>
-    <ul>
-        <li>HTML / CSS : ระดับดี</li>
-        <li>JavaScript : ระดับพื้นฐานถึงปานกลาง</li>
-        <li>Git / GitHub : ระดับพื้นฐาน</li>
-        <li>Linux : ระดับพื้นฐาน</li>
-        <li>การสร้างเกม : ระดับดี</li>
-        <li>การทำงานเป็นทีมและภาวะผู้นำ : ระดับดี</li>
-    </ul>
-    <h2 class="mt-2rem">เป้าหมายการศึกษา</h2>
-
-    <ul>
-        <li>เข้าศึกษาต่อสาขาวิทยาการคอมพิวเตอร์</li>
-        <li>พัฒนาความสามารถด้านการเขียนโปรแกรม</li>
-        <li>ศึกษาเทคโนโลยี Web Development และ Software Development</li>
-        <li>สร้างผลงานที่สามารถนำไปใช้งานได้จริง</li>
-    </ul>
-        </div>
-        <div class="popup-footer">
-            <button class="close-popup" id="close-popup-home" >close</button>
-        </div>
-    </div>
-</div> -->
+   
 </body>
 
 </html>
