@@ -709,52 +709,132 @@ syncHeaderMode();
 
 
 // filter
-function filtercards(category) {
-    const cards = document.querySelectorAll('.card-certificates');
-    cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+let activeCertificateFilter = 'all';
+
+function focusFeaturedCertificate() {
+    const cards = [...document.querySelectorAll('.card-certificates:not(.is-hidden)')];
+    if (!cards.length) return;
+
+    cards.forEach(card => card.classList.toggle('is-featured', card === cards[0]));
+    const firstCard = cards[0];
+    firstCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
 }
 
+function filtercards(category) {
+    activeCertificateFilter = category;
+    const cards = document.querySelectorAll('.card-certificates');
+    const visibleCards = [];
 
+    cards.forEach(card => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.classList.toggle('is-hidden', !match);
+        card.style.display = match ? 'flex' : 'none';
+        if (match) visibleCards.push(card);
+    });
 
+    if (visibleCards.length) {
+        visibleCards.forEach((card, index) => card.classList.toggle('is-featured', index === 0));
+    }
 
+    const section = document.querySelector('.Certificates-contrainer');
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
 
+const certificateFilters = document.querySelectorAll('.filter-btn, .filter-year-link');
+certificateFilters.forEach(button => {
+    button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter') || button.textContent.trim().toLowerCase().replace(/\s+/g, '');
+        if (filterValue.includes('2569') || filterValue.includes('2568') || filterValue.includes('2567') || filterValue.includes('2566') || filterValue.includes('2565')) {
+            filtercards('all');
+            return;
+        }
+        filtercards(filterValue === 'ทั้งหมด' ? 'all' : filterValue);
+    });
+});
 
+const certificatesSection = document.querySelector('.Certificates-contrainer');
+if (certificatesSection) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const visibleCards = [...document.querySelectorAll('.card-certificates:not(.is-hidden)')];
+                if (visibleCards.length) {
+                    visibleCards.forEach(card => card.classList.toggle('is-featured', card === visibleCards[0]));
+                }
+            }
+        });
+    }, { threshold: 0.25 });
 
+    sectionObserver.observe(certificatesSection);
+}
 
-
-
-
-
-
-// fade
 document.addEventListener("DOMContentLoaded", function () {
+    const roleSwitcher = document.querySelector('.role-switcher');
+    const roleText = document.querySelector('.role-text');
+
+    if (roleSwitcher && roleText) {
+        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Front-end Developer,UI/UX Enthusiast,Problem Solver')
+            .split(',')
+            .map(role => role.trim())
+            .filter(Boolean);
+
+        let currentIndex = 0;
+
+        const updateRole = (nextIndex) => {
+            const nextRole = roles[nextIndex % roles.length];
+
+            roleSwitcher.classList.add('is-changing');
+            roleText.classList.add('is-changing');
+
+            setTimeout(() => {
+                roleSwitcher.textContent = nextRole;
+                roleText.textContent = nextRole;
+                roleSwitcher.classList.remove('is-changing');
+                roleText.classList.remove('is-changing');
+            }, 180);
+        };
+
+        if (roles.length) {
+            roleSwitcher.textContent = roles[0];
+            roleText.textContent = roles[0];
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % roles.length;
+                updateRole(currentIndex);
+            }, 3200);
+        }
+    }
+
     const revealElements = document.querySelectorAll(".scroll-reveal");
 
     const observerOptions = {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.15 
+        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.08
     };
 
     const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("active"); 
-            } else {
-                entry.target.classList.remove("active"); 
+                const target = entry.target;
+                target.style.transitionDelay = `${(index % 6) * 0.08}s`;
+                target.classList.add("is-visible");
             }
         });
     }, observerOptions);
 
-    revealElements.forEach((element) => {
+    revealElements.forEach((element, index) => {
+        element.style.transitionDelay = `${(index % 6) * 0.08}s`;
         scrollObserver.observe(element);
     });
+
+    const updateScrollShift = () => {
+        document.documentElement.style.setProperty('--scroll-shift', `${window.scrollY * 0.12}px`);
+    };
+
+    updateScrollShift();
+    window.addEventListener('scroll', updateScrollShift, { passive: true });
 });
 
 

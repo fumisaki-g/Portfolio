@@ -1,58 +1,54 @@
-fetch('assets/data/about.json')
-    .then(response => response.json())
-    .then( data => {
-        const activities = document.getElementById('about-bio-me');
+document.addEventListener('DOMContentLoaded', async () => {
+    async function loadJson(url) {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) {
+            throw new Error(`ไม่สามารถโหลด ${url} ได้: ${response.status}`);
+        }
+        return response.json();
+    }
 
-        data.forEach(item => {
-            activities.innerHTML +=`
-            <p>${item.descriptionabout}</p>`
-        });
-    })
-    .catch (error => {console.error('Error fetching about-me data:', error)})
+    try {
+        const aboutData = await loadJson('assets/data/about.json');
+        const aboutSection = document.getElementById('about-bio-me');
 
+        if (aboutSection && Array.isArray(aboutData) && aboutData.length) {
+            const paragraph = aboutSection.querySelector('p');
+            if (paragraph) {
+                paragraph.textContent = aboutData[0].descriptionabout;
+            }
+        }
 
+        const timelineData = await loadJson('assets/data/timeline.json');
+        const timelineSection = document.getElementById('texttimeline');
 
+        if (timelineSection && Array.isArray(timelineData) && timelineData.length) {
+            const heading = timelineSection.querySelector('h2');
+            const text = timelineSection.querySelector('p');
 
-fetch('assets/data/timeline.json')
-    .then(response => response.json())
-    .then( time => {
-        const activities = document.getElementById('texttimeline');
+            if (heading) {
+                heading.textContent = timelineData[0].title;
+            }
+            if (text) {
+                text.textContent = timelineData[0].content;
+            }
+        }
 
-        time.forEach(text => {
-            activities.innerHTML +=`
-                        <h2>${text.title}</h2>
-                        <h3>${text.content}</h3>`
-        });
-    })
-    .catch (error => {console.error('Error fetching timeline:', error)})
+        const activityData = await loadJson('assets/data/activities-detail.json');
+        const activityContainer = document.getElementById('activities-details');
 
-
-
-
-fetch('assets/data/activities-detail.json')
-    .then(response => response.json())
-    .then( card => {
-        const activities = document.getElementById('activities-details');
-
-        card.forEach(item => {
-            activities.innerHTML +=`
-                        
-                        <div class="skill-bar-box" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <div class="skill-info">
-                                <span class="tag tag-html" style="background-color: #ecfdf5; color: ${item.color_tag};">${item.tag}</span>
-                                <span class="skill-percentage" style="color: #64748b; font-size: 0.9rem;">${item.year}</span>
-                            </div>
-                            <h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">${item.title}</h4>
-                            <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-                                ${item.content}
-                            </p>
-                        </div>
-                        `
-        });
-    })
-    .catch (error => {console.error('Error fetching timeline:', error)})
-
-
-
-
-
+        if (activityContainer && Array.isArray(activityData) && activityData.length) {
+            activityContainer.innerHTML = activityData.map(item => `
+                <div class="skill-bar-box activity-item">
+                    <div class="skill-info">
+                        <span class="tag" style="background-color: #ecfdf5; color: ${item.color_tag || '#0229c7'};">${item.tag}</span>
+                        <span class="skill-percentage">${item.year}</span>
+                    </div>
+                    <h4>${item.title}</h4>
+                    <p>${item.content}</p>
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        console.error('Error fetching JSON data:', error);
+    }
+});
