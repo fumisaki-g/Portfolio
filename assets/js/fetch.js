@@ -51,3 +51,8 @@ fetch('assets/data/activities-detail.json')
         });
     })
     .catch (error => {console.error('Error fetching timeline:', error)})
+
+
+
+
+
