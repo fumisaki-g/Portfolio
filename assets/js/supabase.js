@@ -1,34 +1,50 @@
 const SUPABASE_URL = 'https://kqaampgsnpqxsnzdazxo.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxYWFtcGdzbnBxeHNuemRhenhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU0OTcxMDQsImV4cCI6MjEwMTA3MzEwNH0.HjFwScV2pmTFtvM57ZnO7Ra9BPWcSDTO0qO04lRTpvo';
-// 2. เปลี่ยนชื่อตัวแปรรับค่าเป็น supabaseClient (ห้ามใช้ชื่อ supabase เฉยๆ)
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxYWFtcGdzbnBxeHNuemRhenhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU0OTcxMDQsImV4cCI6MjEwMTA3MzEwNH0.HjFwScV2pmTFtvM57ZnO7Ra9BPWcSDTO0qO04lRTpvo';
 
-// ❌ ของเดิมที่คุณอาจจะใช้อยู่ (อันนี้ทำให้ขึ้น 406):
-// .eq('id', 'home_page').single();
+const supabaseClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
-// ✅ ให้เปลี่ยนเป็นแบบนี้ครับ (ใช้ limit และ [0]):
 async function handleViews() {
-  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const viewCountEl = document.getElementById('view-count');
 
-  if (!isLocalhost) {
-    await supabaseClient.rpc('increment_page_view', { page_id: 'home_page' });
+  if (!viewCountEl) {
+    return;
   }
 
-  // ดึงข้อมูลแบบ array
-  const { data, error } = await supabaseClient
-    .from('page_views')
-    .select('views')
-    .eq('id', 'home_page');
+  if (!supabaseClient || !SUPABASE_KEY || SUPABASE_KEY === 'YOUR_SUPABASE_ANON_KEY') {
+    viewCountEl.textContent = '0';
+    return;
+  }
 
-  // เช็กว่ามีข้อมูลส่งกลับมาไหม แล้วดึงตัวแรก ([0]) มาใช้
-  if (data && data.length > 0) {
-    const viewCountEl = document.getElementById('view-count');
-    if (viewCountEl) {
-      viewCountEl.innerText = data[0].views;
+  try {
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+    if (!isLocalhost) {
+      await supabaseClient.rpc('increment_page_view', { page_id: 'home_page' });
     }
-  } else {
-    console.log("ยังไม่มีข้อมูลแถว home_page หรือดึงไม่ได้", error);
+
+    const { data, error } = await supabaseClient
+      .from('page_views')
+      .select('views')
+      .eq('id', 'home_page')
+      .limit(1);
+
+    if (error) {
+      throw error;
+    }
+
+    if (data && data.length > 0) {
+      viewCountEl.textContent = String(data[0].views ?? 0);
+    } else {
+      viewCountEl.textContent = '0';
+    }
+  } catch (error) {
+    console.error('Failed to load page view count:', error);
+    viewCountEl.textContent = '0';
   }
 }
 
-handleViews();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', handleViews);
+} else {
+  handleViews();
+}
