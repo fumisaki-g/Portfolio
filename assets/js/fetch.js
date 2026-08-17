@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="skill-bar-box activity-item">
                     <div class="skill-info">
                         <span class="tag" style="background-color: #ecfdf5; color: ${item.color_tag || '#0229c7'};">${item.tag}</span>
-                        <span class="skill-percentage">${item.year}</span>
+                        <span class="skill-percentage">${item.day}</span>
                     </div>
                     <h4>${item.title}</h4>
                     <p>${item.content}</p>

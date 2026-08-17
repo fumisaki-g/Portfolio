@@ -770,12 +770,16 @@ if (certificatesSection) {
     sectionObserver.observe(certificatesSection);
 }
 
+
+
+// text-switcher
+
 document.addEventListener("DOMContentLoaded", function () {
     const roleSwitcher = document.querySelector('.role-switcher');
     const roleText = document.querySelector('.role-text');
 
     if (roleSwitcher && roleText) {
-        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Front-end Developer,UI/UX Enthusiast,Problem Solver')
+        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Front-end Developer,Junior Game Developer,IT Support,AI-Assisted Software Developer')
             .split(',')
             .map(role => role.trim())
             .filter(Boolean);
@@ -818,14 +822,14 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 const target = entry.target;
-                target.style.transitionDelay = `${(index % 6) * 0.08}s`;
+                target.style.transitionDelay = `${(index % 6) * 0.05}s`;
                 target.classList.add("is-visible");
             }
         });
     }, observerOptions);
 
     revealElements.forEach((element, index) => {
-        element.style.transitionDelay = `${(index % 6) * 0.08}s`;
+        element.style.transitionDelay = `${(index % 6) * 0.05}s`;
         scrollObserver.observe(element);
     });
 
