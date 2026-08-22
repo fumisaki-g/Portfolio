@@ -1350,7 +1350,7 @@ p {
     background: rgba(var(--surface-rgb), 0.85); 
     backdrop-filter: blur(8px);
     border-radius: 16px;          
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.ผผ05); 
 }
 
 .Time-countdown-container h3 {
