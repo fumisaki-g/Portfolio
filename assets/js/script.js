@@ -14,14 +14,6 @@ const backgroundpopupc3 = document.getElementById('background-popup-c3');
 
 
 
-const openpopupSOP = document.getElementById('SOP')
-const closepopupSOP = document.getElementById('close-popup-SOP')
-const backgroundSOP = document.getElementById('background-popup-SOP')
-
-
-// const openpopuphome = document.getElementById('open-popup-home');
-// const closepopuphome = document.getElementById('close-popup-home');
-// const backgroundpopuphome = document.getElementById('background-popup-home');
 
 function openPopupc1() {
     backgroundpopupc1.style.display = "flex";
@@ -47,21 +39,7 @@ function closePopupc3() {
 }
 
 
-function openPopupSOP() {
-    backgroundSOP.style.display = "flex";
-}
 
-function closePopupSOP() {
-    backgroundSOP.style.display = "none";
-}
-
-// function openPopuphome() {
-//     backgroundpopuphome.style.display = "block";
-// }
-
-// function closePopuphome() {
-//     backgroundpopuphome.style.display = "none";
-// }
 
 openpopupc1.addEventListener('click', openPopupc1);
 closepopupc1.addEventListener('click', closePopupc1);
@@ -70,10 +48,6 @@ closepopupc2.addEventListener('click', closePopupc2);
 openpopupc3.addEventListener('click', openPopupc3);
 closepopupc3.addEventListener('click', closePopupc3);
 
-openpopupSOP.addEventListener('click', openPopupSOP);
-closepopupSOP.addEventListener('click', closePopupSOP);
-// openpopuphome.addEventListener('click', openPopuphome);
-// closepopuphome.addEventListener('click', closePopuphome);
 
 
 
@@ -158,6 +132,22 @@ function closePopup5() {
 
 openpopup5.addEventListener('click', openPopup5);
 closepopup5.addEventListener('click', closePopup5);
+
+const openpopup6 = document.getElementById('open-popup-certificate-6');
+const closepopup6 = document.getElementById('close-popup-certificate-6');
+const backgroundpopup6 = document.getElementById('background-popup-certificate-6');
+
+function openPopup6() {
+    backgroundpopup6.style.display = "flex";
+}
+
+function closePopup6() {
+    backgroundpopup6.style.display = "none";
+}
+
+openpopup6.addEventListener('click', openPopup6);
+closepopup6.addEventListener('click', closePopup6);
+
 
 const openpopups1 = document.getElementById('open-popup-certificate-s1');
 const closepopups1 = document.getElementById('close-popup-certificate-s1');
@@ -573,6 +563,50 @@ openpopups27.addEventListener('click', openPopups27);
 closepopups27.addEventListener('click', closePopups27);
 
 
+const openpopups28 = document.getElementById('open-popup-certificate-s28');
+const closepopups28 = document.getElementById('close-popup-certificate-s28');
+const backgroundpopups28 = document.getElementById('background-popup-certificate-s28');
+function openPopups28() {
+    backgroundpopups28.style.display = "flex";
+}
+
+function closePopups28() {
+    backgroundpopups28.style.display = "none";
+}
+
+openpopups28.addEventListener('click', openPopups28);
+closepopups28.addEventListener('click', closePopups28);
+
+
+const openpopups29 = document.getElementById('open-popup-certificate-s29');
+const closepopups29 = document.getElementById('close-popup-certificate-s29');
+const backgroundpopups29 = document.getElementById('background-popup-certificate-s29');
+function openPopups29() {
+    backgroundpopups29.style.display = "flex";
+}
+
+function closePopups29() {
+    backgroundpopups29.style.display = "none";
+}
+
+openpopups29.addEventListener('click', openPopups29);
+closepopups29.addEventListener('click', closePopups29);
+
+
+const openpopups30 = document.getElementById('open-popup-certificate-s30');
+const closepopups30 = document.getElementById('close-popup-certificate-s30');
+const backgroundpopups30 = document.getElementById('background-popup-certificate-s30');
+function openPopups30() {
+    backgroundpopups30.style.display = "flex";
+}
+
+function closePopups30() {
+    backgroundpopups30.style.display = "none";
+}
+
+openpopups30.addEventListener('click', openPopups30);
+closepopups30.addEventListener('click', closePopups30);
+
 
 
 
@@ -913,9 +947,9 @@ window.addEventListener('load', function() {
 
 
 
-// time
+// timeline
 // กำหนดวันและเวลาที่ต้องการให้นับถอยหลังไปถึง
-const targetDate = new Date("2026-08-26T17:30:00").getTime();
+const targetDate = new Date("2026-10-01T09:30:00").getTime();
 
 
 function updateCountdown() {
