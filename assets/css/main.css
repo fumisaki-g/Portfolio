@@ -252,6 +252,7 @@ p {
 .about-skills-section h3 {
     color: var(--text-heading);
     margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: 1.3rem;
 }
 
@@ -400,6 +401,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-top: 0.5rem;
 }
 
 .skill-bar-box .tag {

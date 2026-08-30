@@ -612,136 +612,6 @@ closepopups30.addEventListener('click', closePopups30);
 
 
 
-
-
-
-
-
-
-// navbar
-
-const tab1 = document.getElementById('nav-tab1');
-const tab2 = document.getElementById('nav-tab2');
-const headerContainer = document.querySelector('.header-container');
-const menuToggle = document.querySelector('.header-menu-toggle');
-
-let isOverTab1 = false;
-let isOverTab2 = false;
-let desktopInteractionsBound = false;
-
-function checkandHide() {
-    setTimeout(() => {
-        if (!isOverTab1 && !isOverTab2) {
-            tab2.classList.add('nav-2-hidden');
-        }
-    }, 400);
-}
-
-function handleTab1Enter() {
-    isOverTab1 = true;
-    tab2.classList.remove('nav-2-hidden');
-}
-
-function handleTab1Leave() {
-    isOverTab1 = false;
-    checkandHide();
-}
-
-function handleTab2Enter() {
-    isOverTab2 = true;
-}
-
-function handleTab2Leave() {
-    isOverTab2 = false;
-    checkandHide();
-}
-
-function bindDesktopInteractions() {
-    if (desktopInteractionsBound || !tab1 || !tab2) {
-        return;
-    }
-
-   
-    tab1.addEventListener('mouseenter', handleTab1Enter);
-    tab1.addEventListener('mouseleave', handleTab1Leave);
-    tab2.addEventListener('mouseenter', handleTab2Enter);
-    tab2.addEventListener('mouseleave', handleTab2Leave);
-    desktopInteractionsBound = true;
-}
-
-function unbindDesktopInteractions() {
-    if (!desktopInteractionsBound || !tab1 || !tab2) {
-        return;
-    }
-
-    tab1.removeEventListener('mouseenter', handleTab1Enter);
-    tab1.removeEventListener('mouseleave', handleTab1Leave);
-    tab2.removeEventListener('mouseenter', handleTab2Enter);
-    tab2.removeEventListener('mouseleave', handleTab2Leave);
-    desktopInteractionsBound = false;
-}
-
-function closeMobileMenu() {
-    if (!headerContainer || !menuToggle) {
-        return;
-    }
-
-    headerContainer.classList.remove('header-menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-}
-
-function toggleMobileMenu() {
-    if (!headerContainer || !menuToggle || !window.matchMedia('(max-width: 768px)').matches) {
-        return;
-    }
-
-   
-    const isOpen = headerContainer.classList.toggle('header-menu-open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-}
-
-function syncHeaderMode() {
-    if (!tab1 || !tab2) {
-        return;
-    }
-
-    if (window.matchMedia('(max-width: 768px)').matches) {
-        unbindDesktopInteractions();
-        tab2.classList.remove('nav-2-hidden');
-        closeMobileMenu();
-    } else {
-        bindDesktopInteractions();
-        tab2.classList.remove('nav-2-hidden');
-        closeMobileMenu();
-    }
-}
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', toggleMobileMenu);
-}
-
-document.querySelectorAll('.header-btn a, .header-btn2 a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.matchMedia('(max-width: 768px)').matches) {
-            closeMobileMenu();
-        }
-    });
-});
-
-window.addEventListener('resize', syncHeaderMode);
-syncHeaderMode();
-
-
-
-
-
-
-
-
-
-
-
-
 // filter
 let activeCertificateFilter = 'all';
 
@@ -799,7 +669,7 @@ if (certificatesSection) {
                 }
             }
         });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.1 });
 
     sectionObserver.observe(certificatesSection);
 }
@@ -813,7 +683,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const roleText = document.querySelector('.role-text');
 
     if (roleSwitcher && roleText) {
-        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Front-end Developer,Junior Game Developer,IT Support,AI-Assisted Software Developer')
+        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Junior Front-end Developer,Junior Game Developer,IT Support,AI-Assisted Software Developer')
             .split(',')
             .map(role => role.trim())
             .filter(Boolean);
