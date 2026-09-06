@@ -605,7 +605,7 @@ window.addEventListener('load', function() {
 
 // timeline
 // กำหนดวันและเวลาที่ต้องการให้นับถอยหลังไปถึง
-const targetDate = new Date("2026-09-10T09:30:00").getTime();
+const targetDate = new Date("2026-09-07T17:30:00").getTime();
 
 
 function updateCountdown() {
