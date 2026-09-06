@@ -2009,7 +2009,7 @@ main {
 .about-skills-section summary h3 {
     display: inline-block;
     color: var(--text-heading);
-    background: rgba(255,255,255,0.02);
+    background: var(--accent);
     padding: 0.7rem 1.2rem;
     border-radius: 999px;
     border: 1px solid var(--border);
