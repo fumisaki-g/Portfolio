@@ -153,10 +153,10 @@ function closePopup5() {
 openpopup5.addEventListener('click', openPopup5);
 closepopup5.addEventListener('click', closePopup5);
 
+
 const openpopup6 = document.getElementById('open-popup-certificate-6');
 const closepopup6 = document.getElementById('close-popup-certificate-6');
 const backgroundpopup6 = document.getElementById('background-popup-certificate-6');
-
 function openPopup6() {
     backgroundpopup6.style.display = "flex";
 }
@@ -164,10 +164,26 @@ function openPopup6() {
 function closePopup6() {
     backgroundpopup6.style.display = "none";
 }
-
 openpopup6.addEventListener('click', openPopup6);
 closepopup6.addEventListener('click', closePopup6);
 
+
+const openpopup7 = document.getElementById('open-popup-certificate-7');
+const closepopup7 = document.getElementById('close-popup-certificate-7');
+const backgroundpopup7 = document.getElementById('background-popup-certificate-7');
+function openPopup7() {
+    backgroundpopup7.style.display = "flex";
+}
+
+function closePopup7() {
+    backgroundpopup7.style.display = "none";
+}
+
+openpopup7.addEventListener('click', openPopup7);
+closepopup7.addEventListener('click', closePopup7);
+
+
+// certificate-s
 
 const openpopups1 = document.getElementById('open-popup-certificate-s1');
 const closepopups1 = document.getElementById('close-popup-certificate-s1');
@@ -412,6 +428,21 @@ function closePopups30() {
 
 openpopups30.addEventListener('click', openPopups30);
 closepopups30.addEventListener('click', closePopups30);
+
+
+const openpopups31 = document.getElementById('open-popup-certificate-s31');
+const closepopups31 = document.getElementById('close-popup-certificate-s31');
+const backgroundpopups31 = document.getElementById('background-popup-certificate-s31');
+function openPopups31() {
+    backgroundpopups31.style.display = "flex";
+}
+
+function closePopups31() {
+    backgroundpopups31.style.display = "none";
+}
+
+openpopups31.addEventListener('click', openPopups31);
+closepopups31.addEventListener('click', closePopups31);
 
 
 
