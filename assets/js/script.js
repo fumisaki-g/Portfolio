@@ -520,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const roleText = document.querySelector('.role-text');
 
     if (roleSwitcher && roleText) {
-        const roles = (roleSwitcher.dataset.roles || 'Student Developer,Junior Front-end Developer,Junior Game Developer,IT Support,AI-Assisted Software Developer')
+        const roles = (roleSwitcher.dataset.roles || 'Junior Front-end Developer,Junior Game Developer,IT Support,AI-Assisted Software Developer')
             .split(',')
             .map(role => role.trim())
             .filter(Boolean);
@@ -655,8 +655,8 @@ window.addEventListener('load', function() {
 
 
 // timeline
-// กำหนดวันและเวลาที่ต้องการให้นับถอยหลังไปถึง
-const targetDate = new Date("2026-10-01T17:30:00").getTime();
+// กำหนดวันและเวลาที่ต้องการให้นับถอยหลัง
+const targetDate = new Date("2026-11-21T17:30:00").getTime();
 
 
 function updateCountdown() {
