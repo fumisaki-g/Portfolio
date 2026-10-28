@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <h4>${item.title}</h4>
                     <p>${item.content}</p>
                 </div>
-            `).join('');
+            `).join(''); 
         }
     } catch (error) {
         console.error('Error fetching JSON data:', error);
